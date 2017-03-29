@@ -8,7 +8,6 @@ class Item < ActiveRecord::Base
 
   validates :name, presence: true
   validates :description, presence: true
-  validates :category, inclusion: { in: %w(Deco Pot Plant Custom)}
   validates :price, presence: true
 
   def add_plant(plant)
