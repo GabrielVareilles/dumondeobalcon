@@ -46,7 +46,7 @@ module Services
 
         data[:photo_url] = doc.search('.swiper-slide a').attribute('href').value
 
-        return doc
+        return data
       end
     end
   end
