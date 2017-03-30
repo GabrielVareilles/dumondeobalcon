@@ -9,7 +9,7 @@ module Services
         file = open(url)
         doc = Nokogiri::HTML(file)
         data = {}
-        data[:price] = doc.search('.price').first.text.split(' € ')[0].to_i * 1000
+        data[:price] = doc.search('.price').first.text.split(' € ')[0].to_i * 100
         data[:name] = doc.search('.title-page').first.text
         doc.search('.desc').text != "" ? data[:description] = doc.search('.desc').text : data[:description] = "Pas de description"
         tech_hash = doc.search(name="th").map { |e| e.text }.zip(doc.search(name="td").map { |e| e.text }).to_h
