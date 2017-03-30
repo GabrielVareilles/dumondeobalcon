@@ -407,7 +407,7 @@ urls << "https://www.delamaison.fr/chaise-jardin-pliante-acier-hendaia-p-192224.
 urls << 'https://www.delamaison.fr/chaise-jardin-pliante-grise-p-192210.html#p=159136'
 urls << "https://www.leroymerlin.fr/v3/p/produits/lot-de-2-chaises-de-jardin-en-bois-porto-porto-e1400903432"
 urls.each do |url|
-  if url.spit('.')[1] == 'leroymerlin'
+  if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
@@ -426,7 +426,7 @@ urls << "https://www.delamaison.fr/table-jardin-pliante-acacia-gris-70x70-silver
 urls << "https://www.delamaison.fr/table-jardin-carree-pliante-acier-60x60cm-p-90544.html#p=159137"
 urls << "https://www.delamaison.fr/table-balcon-pliante-rabattable-acier-hauteur-115cm-bistro-p-166924.html"
 urls.each do |url|
-  if url.spit('.')[1] == 'leroymerlin'
+  if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
@@ -446,7 +446,7 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/table-de-jardin-basse-naterial
 urls << "https://www.leroymerlin.fr/v3/p/produits/table-basse-grosfillex-miami-carree-blanc-2-personnes-e1400020920#&xtmc=table_basse_jardin&xtcr=46"
 urls << "https://www.leroymerlin.fr/v3/p/produits/table-basse-grosfillex-miami-carree-anthracite-2-personnes-e1400020921#&xtmc=table_basse_jardin&xtcr=47"
 urls.each do |url|
-  if url.spit('.')[1] == 'leroymerlin'
+  if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
@@ -461,7 +461,7 @@ urls << "https://www.delamaison.fr/fauteuils-jardin-empilables-aluminium-textile
 urls << "https://www.leroymerlin.fr/v3/p/produits/salon-bas-de-jardin-acacia-bois-marron-1-table-1-banc-2-chaises-e1401421336#&xtmc=table_basse_jardin&xtcr=2"
 urls << "https://www.leroymerlin.fr/v3/p/produits/salon-bas-de-jardin-portovecchio-resine-tressee-gris-2-fauteuils-1-table-basse-e1401421319#&xtmc=table_basse_jardin&xtcr=5"
 urls.each do |url|
-  if url.spit('.')[1] == 'leroymerlin'
+  if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
@@ -478,7 +478,7 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/coussin-de-sol-gris-zingue-lol
 urls << "https://www.leroymerlin.fr/v3/p/produits/coussin-d-assise-de-chaise-ou-de-fauteuil-gris-dore-pour-salon-e1500572346"
 urls << "https://www.leroymerlin.fr/v3/p/produits/coussin-d-assise-de-chaise-ou-de-fauteuil-muscade-bistro-e158334"
 urls.each do |url|
-  if url.spit('.')[1] == 'leroymerlin'
+  if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
@@ -494,7 +494,7 @@ urls << "https://www.bigberthaoriginal.fr/products/lime-green-big-bertha-nylon-b
 urls << "https://www.leroymerlin.fr/v3/p/produits/pouf-de-sol-gris-lounge-e1400794760"
 urls << "https://www.leroymerlin.fr/v3/p/produits/pouf-de-jardin-en-tissu-berlingot-blanc-e1400273381"
 urls.each do |url|
-  if url.spit('.')[1] == 'leroymerlin'
+  if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
@@ -515,7 +515,7 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/chilienne-de-jardin-en-tissu-l
 urls << "https://www.leroymerlin.fr/v3/p/produits/chilienne-de-jardin-en-tissu-editeur-sable-e1401431417#&xtmc=transat&xtcr=35"
 urls << "https://www.leroymerlin.fr/v3/p/produits/toile-de-transat-amovible-en-tissu-toile-de-rechange-maxi-transat-seigle-e1500620042#&xtmc=transat&xtcr=48"
 urls.each do |url|
-  if url.spit('.')[1] == 'leroymerlin'
+  if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
@@ -531,7 +531,7 @@ urls << "https://www.delamaison.fr/salon-pour-balcon-places-table-60x53m-chaises
 
 category = 'De Ranger'
 urls.each do |url|
-  if url.spit('.')[1] == 'leroymerlin'
+  if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
@@ -548,7 +548,7 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/coffre-de-jardin-resine-circa-
 urls << "https://www.leroymerlin.fr/v3/p/produits/coffre-de-jardin-resine-eden-garden-bench-gris-noir-l-140-x-h-84-x-p-60-cm-e1401421708#&xtmc=coffre_exterieur&xtcr=22"
 urls << "https://www.delamaison.fr/table-jardin-120x70cm-cante-p-200252.html"
 urls.each do |url|
-  if url.spit('.')[1] == 'leroymerlin'
+  if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
@@ -569,7 +569,7 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/etendoir-tour-blanc-bleu-azur-
 
 category = 'De Recevoir'
 urls.each do |url|
-  if url.spit('.')[1] == 'leroymerlin'
+  if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
@@ -588,7 +588,7 @@ urls << "https://www.alicedelice.com/verre-a-eau/set-6-gobelets-en-verre-picardi
 urls << "https://www.alicedelice.com/flute-a-champagne/set-6-flutes-a-champagne-1018213.html"
 urls << "https://www.alicedelice.com/assiettes/1-assiette-a-risotto-1010928.html"
 urls.each do |url|
-  if url.spit('.')[1] == 'leroymerlin'
+  if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
@@ -603,7 +603,7 @@ urls << "https://www.alicedelice.com/assiettes/1-assiette-a-risotto-1010928.html
 urls << "https://www.alicedelice.com/assiettes/8-assiettes-pirate-1017016.html"
 urls << "https://www.alicedelice.com/assiettes/8-assiettes-princesse-1017017.html"
 urls.each do |url|
-  if url.spit('.')[1] == 'leroymerlin'
+  if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
@@ -623,7 +623,7 @@ urls << "https://www.alicedelice.com/accessoires-cocktails/shaker-a-cocktail-ino
 
 category = 'De Cuisiner'
 urls.each do |url|
-  if url.spit('.')[1] == 'leroymerlin'
+  if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
@@ -641,7 +641,7 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/barbecue-electrique-weber-webe
 urls << "https://www.leroymerlin.fr/v3/p/produits/barbecue-electrique-paname-gris-e1400077426#&xtmc=barbecue&xtcr=46"
 urls << "https://www.delamaison.fr/barbecue-charbon-nomade-longueur-44cm-anywhere-p-205766.html"
 urls.each do |url|
-  if url.spit('.')[1] == 'leroymerlin'
+  if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
@@ -656,7 +656,7 @@ urls << "https://www.alicedelice.com/cuisson/plancha-electrique-1014864.html"
 urls << "https://www.alicedelice.com/plancha/plancha-prestige-600-1014866.html"
 urls << "https://www.alicedelice.com/plancha/chariot-pour-plancha-prestige-600-1014868.html"
 urls.each do |url|
-  if url.spit('.')[1] == 'leroymerlin'
+  if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
@@ -672,7 +672,7 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/housse-de-protection-pour-barb
 urls << "https://www.leroymerlin.fr/v3/p/produits/brosse-weber-e166863"
 urls << "https://www.leroymerlin.fr/v3/p/produits/brosse-bois-weber-e33510"
 urls.each do |url|
-  if url.spit('.')[1] == 'leroymerlin'
+  if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
@@ -684,7 +684,7 @@ sub_category = 'Pierrade'
 urls = []
 
 urls.each do |url|
-  if url.spit('.')[1] == 'leroymerlin'
+  if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
@@ -699,7 +699,7 @@ urls << "https://www.alicedelice.com/1124-preparer-decouper"
 
 category = 'De Cultiver'
 urls.each do |url|
-  if url.spit('.')[1] == 'leroymerlin'
+  if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
@@ -723,7 +723,7 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/pot-fibre-l-35-x-l-35-x-h-51-c
 urls << "https://www.leroymerlin.fr/v3/p/produits/pot-terre-cuite-deroma-diam-9-x-h-8-5-cm-terre-cuite-rouge-e138754"
 urls << "https://www.lightonline.fr/guirlande-et-objet-lumineux/3266/slide-il-vaso-pot-lumineux-exterieur-h75cm"
 urls.each do |url|
-  if url.spit('.')[1] == 'leroymerlin'
+  if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
@@ -739,7 +739,7 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/basilic-grand-vert-vilmorin-2-
 urls << "https://www.leroymerlin.fr/v3/p/produits/radis-de-18-jours-vilmorin-10-g-e149382"
 urls << "https://www.leroymerlin.fr/v3/p/produits/tomate-coeur-de-boeuf-vilmorin-0-2-g-e149160"
 urls.each do |url|
-  if url.spit('.')[1] == 'leroymerlin'
+  if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
@@ -755,7 +755,7 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/potager-sur-pieds-eda-plastiqu
 urls << "https://www.leroymerlin.fr/v3/p/produits/potager-sur-pieds-eda-plastiques-vert-l-76-x-l-38-5-x-h-68-cm-e1500270360?queryredirect=a_fp_potager_sur_pieds_eda_plastiques_vert_l_76_x_l_38_5_x_h_68_cm&numpage=1"
 urls << "https://www.leroymerlin.fr/v3/p/produits/carre-potager-forest-avenue-noisetier-naturel-l-90-x-l-90-x-h-35-cm-e87682#&xtmc=carre_potager&xtcr=13"
 urls.each do |url|
-  if url.spit('.')[1] == 'leroymerlin'
+  if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
@@ -768,7 +768,7 @@ urls = []
 
 urls << "https://www.leroymerlin.fr/v3/p/produits/terreau-balcons-et-terrasse-or-brun-20-l-e1400992545"
 urls.each do |url|
-  if url.spit('.')[1] == 'leroymerlin'
+  if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
@@ -786,7 +786,7 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/pelle-a-terreau-inox-geolia-er
 urls << "https://www.leroymerlin.fr/v3/p/produits/plantoir-a-bulbes-acier-gardena-3412-20-e165409"
 urls << "https://www.leroymerlin.fr/v3/p/produits/binette-acier-geolia-nature-e1400459347"
 urls.each do |url|
-  if url.spit('.')[1] == 'leroymerlin'
+  if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
@@ -802,7 +802,7 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/tablier-cordeline-tradex-choco
 urls << "https://www.leroymerlin.fr/v3/p/produits/tablier-cordeline-tradex-fushia-taille-unique-e1401571172"
 urls << "https://www.leroymerlin.fr/v3/p/produits/tablier-cordeline-tradex-taupe-taille-unique-e1401571169"
 urls.each do |url|
-  if url.spit('.')[1] == 'leroymerlin'
+  if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
@@ -815,7 +815,7 @@ urls = []
 
 urls << "https://www.leroymerlin.fr/v3/p/produits/composteur-monobloc-250-l-e136814#&xtmc=composteur&xtcr=7"
 urls.each do |url|
-  if url.spit('.')[1] == 'leroymerlin'
+  if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
@@ -829,7 +829,7 @@ urls = []
 urls << "https://www.leroymerlin.fr/v3/p/produits/un-potager-sur-mon-balcon-larousse-e155388#&xtmc=balcon&xtcr=17"
 urls << "https://www.leroymerlin.fr/v3/p/produits/un-potager-dans-un-mini-jardin-sur-un-balcon-ou-un-appui-de-fenetre-marabout-e155323#&xtmc=balcon&xtcr=20"
 urls.each do |url|
-  if url.spit('.')[1] == 'leroymerlin'
+  if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
@@ -844,7 +844,7 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/serre-de-balcon-nortene-l-31-x
 
 category = 'De Me Proteger'
 urls.each do |url|
-  if url.spit('.')[1] == 'leroymerlin'
+  if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
@@ -861,7 +861,7 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/parasol-balcon-leo-gris-rectan
 urls << "https://www.leroymerlin.fr/v3/p/produits/parasol-balcon-leo-vert-anis-rectangulaire-l-300-x-l-150-cm-e1400027446#&xtmc=balcon&xtcr=24"
 urls << "https://www.leroymerlin.fr/v3/p/produits/parasol-balcon-leo-ecru-rectangulaire-l-300-x-l-150-cm-e1400027450#&xtmc=balcon&xtcr=25"
 urls.each do |url|
-  if url.spit('.')[1] == 'leroymerlin'
+  if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
@@ -877,7 +877,7 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/panneau-treillis-bois-ajoure-s
 urls << "https://www.leroymerlin.fr/v3/p/produits/panneau-bois-ajoure-l-78-cm-x-h-150-cm-marron-e1400793912"
 urls << "https://www.leroymerlin.fr/v3/p/produits/treillage-fixe-droite-n10703-l-60-x-h-120-x-p-0-6-cm-e1401630379"
 urls.each do |url|
-  if url.spit('.')[1] == 'leroymerlin'
+  if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
@@ -892,7 +892,7 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/store-de-balcon-manuel-balcony
 
 category = "De m'éclairer PE"
 urls.each do |url|
-  if url.spit('.')[1] == 'leroymerlin'
+  if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
@@ -911,7 +911,7 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/demi-applique-exterieure-montr
 urls << "https://www.leroymerlin.fr/v3/p/produits/applique-exterieure-malambo-led-integree-50-w-630-lm-gris-inspire-e1400887476"
 urls << "https://www.leroymerlin.fr/v3/p/produits/applique-descendante-exterieure-neiva-gu10-35-w-blanc-inspire-e1400887625"
 urls.each do |url|
-  if url.spit('.')[1] == 'leroymerlin'
+  if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
@@ -933,7 +933,7 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/boule-decorative-exterieure-bu
 
 category = 'De Refaire mon sol'
 urls.each do |url|
-  if url.spit('.')[1] == 'leroymerlin'
+  if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
@@ -948,7 +948,7 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/gazon-artificiel-gazon-artif-s
 urls << "https://www.leroymerlin.fr/v3/p/produits/gazon-artificiel-oraverde-au-rouleau-1-x-5-m-e1400094597"
 urls << "https://www.leroymerlin.fr/v3/p/produits/dalle-clipsable-gazon-synthetique-vert-l-30-x-l-30-cm-x-ep-30-mm-e165680"
 urls.each do |url|
-  if url.spit('.')[1] == 'leroymerlin'
+  if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
@@ -964,7 +964,7 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/dalle-bois-bankirai-l-50-x-l-5
 urls << "https://www.leroymerlin.fr/v3/p/produits/lot-de-4-dalles-clipsables-bois-snap-amp-go-marron-naturel-l-30-x-l-30-cm-x-ep-e1400797929"
 urls << "https://www.leroymerlin.fr/v3/p/produits/dalle-bois-hevea-l-100-x-l-100-cm-x-ep-40-mm-e1500280938"
 urls.each do |url|
-  if url.spit('.')[1] == 'leroymerlin'
+  if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
@@ -977,7 +977,7 @@ urls = []
 
 urls << "https://www.leroymerlin.fr/v3/p/produits/planche-composite-grafik-2-noir-anthracite-l-400-x-l-18-6-cm-x-ep-26-mm-e1401291591"
 urls.each do |url|
-  if url.spit('.')[1] == 'leroymerlin'
+  if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
