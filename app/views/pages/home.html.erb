@@ -160,7 +160,7 @@
          <div class="col-sm-12">
            <!-- START CARROUSSEL-->
            <div class="box-carousel" data-carousel-options='{"items":"5", "navigation": true}'>
-             <% Item.all.each do |pot| %>
+             <% Item.all.shuffle.each do |pot| %>
                <div class="item">
                  <%= image_tag pot.attributes['photo_url']%>
                  <p class="m-t-10 text-center"><%= pot.name %></p>
