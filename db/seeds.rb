@@ -396,12 +396,586 @@ end
 
 ##########################   Item  SEED    ###############
 
-url1 = 'https://www.leroymerlin.fr/v3/p/produits/chaise-de-jardin-en-polycarbonate-paris-lux-transparent-e122696'
-item1 = Item.new(Services::Scrapper.scrap(url1))
-item1.category = "pot"
-item1.save!
+category = 'De Profiter'
+sub_category = 'Chaise'
+
+urls = []
+
+urls << "https://www.leroymerlin.fr/v3/p/produits/chaise-de-jardin-en-polycarbonate-paris-lux-transparent-e122696"
+urls << "https://www.leroymerlin.fr/v3/p/produits/chaise-de-jardin-en-resine-paris-greenpol-blanc-e1400051216"
+urls << "https://www.delamaison.fr/chaise-jardin-pliante-acier-hendaia-p-192224.html"
+urls << 'https://www.delamaison.fr/chaise-jardin-pliante-grise-p-192210.html#p=159136'
+urls << "https://www.leroymerlin.fr/v3/p/produits/lot-de-2-chaises-de-jardin-en-bois-porto-porto-e1400903432"
+urls.each do |url|
+  if url.spit('.')[1] == 'leroymerlin'
+    item = Item.new(Services::Scrapper.scrap(url1))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  end
+end
+sub_category = 'Table'
+
+urls = []
+
+urls << "https://www.leroymerlin.fr/v3/p/produits/table-de-jardin-naterial-flore-ronde-gris-2-personnes-e157735#&xtmc=table_jardin&xtcr=3"
+urls << "https://www.leroymerlin.fr/v3/p/produits/table-de-jardin-flore-ronde-blanc-4-personnes-e157749#&xtmc=table_jardin&xtcr=4"
+urls << "https://www.leroymerlin.fr/v3/p/produits/table-de-jardin-fermob-bistro-carree-gris-orage-2-personnes-e1400704302#&xtmc=table_jardin&xtcr=12 "
+urls << "https://www.delamaison.fr/table-balcon-pliante-60x53cm-p-124037.html#p=192213 "
+urls << "https://www.delamaison.fr/table-jardin-pliante-acacia-gris-70x70-silverwood-p-218975.html"
+urls << "https://www.delamaison.fr/table-jardin-carree-pliante-acier-60x60cm-p-90544.html#p=159137"
+urls << "https://www.delamaison.fr/table-balcon-pliante-rabattable-acier-hauteur-115cm-bistro-p-166924.html"
+urls.each do |url|
+  if url.spit('.')[1] == 'leroymerlin'
+    item = Item.new(Services::Scrapper.scrap(url1))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  end
+end
+sub_category = 'Table basse'
+
+urls = []
+
+urls << "https://www.delamaison.fr/table-basse-empilable-alize-d48cm-p-22008.html#p=22003"
+urls << "https://www.tikamoon.com/art-table-basse-ronde-en-marbre-et-metal-2001.html"
+urls << "https://www.leroymerlin.fr/v3/p/produits/table-de-jardin-basse-mabrista-ronde-ecru-2-personnes-e1500514721#&xtmc=table_basse_jardin&xtcr=2"
+urls << "https://www.leroymerlin.fr/v3/p/produits/table-de-jardin-basse-kent-carree-naturel-2-personnes-e1500488104#&xtmc=table_basse_jardin&xtcr=7"
+urls << "https://www.leroymerlin.fr/v3/p/produits/table-de-jardin-basse-newgarden-capri-ronde-blanc-4-personnes-e1401433828#&xtmc=table_basse_jardin&xtcr=8"
+urls << "https://www.leroymerlin.fr/v3/p/produits/table-de-jardin-basse-naterial-portofino-rectangulaire-gris-2-personnes-e1500514731#&xtmc=table_basse_jardin&xtcr=12"
+urls << "https://www.leroymerlin.fr/v3/p/produits/table-basse-grosfillex-miami-carree-blanc-2-personnes-e1400020920#&xtmc=table_basse_jardin&xtcr=46"
+urls << "https://www.leroymerlin.fr/v3/p/produits/table-basse-grosfillex-miami-carree-anthracite-2-personnes-e1400020921#&xtmc=table_basse_jardin&xtcr=47"
+urls.each do |url|
+  if url.spit('.')[1] == 'leroymerlin'
+    item = Item.new(Services::Scrapper.scrap(url1))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  end
+end
+sub_category = 'fauteuil & canapé'
+
+urls = []
+
+urls << "https://www.delamaison.fr/fauteuils-jardin-empilables-aluminium-textilene-modena-p-104311.html"
+urls << "https://www.leroymerlin.fr/v3/p/produits/salon-bas-de-jardin-acacia-bois-marron-1-table-1-banc-2-chaises-e1401421336#&xtmc=table_basse_jardin&xtcr=2"
+urls << "https://www.leroymerlin.fr/v3/p/produits/salon-bas-de-jardin-portovecchio-resine-tressee-gris-2-fauteuils-1-table-basse-e1401421319#&xtmc=table_basse_jardin&xtcr=5"
+urls.each do |url|
+  if url.spit('.')[1] == 'leroymerlin'
+    item = Item.new(Services::Scrapper.scrap(url1))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  end
+end
+sub_category = 'Coussin'
+
+urls = []
+
+urls << "https://www.leroymerlin.fr/v3/p/produits/coussin-de-bain-de-soleil-gris-zingue-lola-e1401437288"
+urls << "https://www.leroymerlin.fr/v3/p/produits/coussin-d-assise-de-chaise-ou-de-fauteuil-gris-zingue-lola-e1401437277"
+urls << "https://www.leroymerlin.fr/v3/p/produits/coussin-de-sol-gris-zingue-lola-e1400127016"
+urls << "https://www.leroymerlin.fr/v3/p/produits/coussin-d-assise-de-chaise-ou-de-fauteuil-gris-dore-pour-salon-e1500572346"
+urls << "https://www.leroymerlin.fr/v3/p/produits/coussin-d-assise-de-chaise-ou-de-fauteuil-muscade-bistro-e158334"
+urls.each do |url|
+  if url.spit('.')[1] == 'leroymerlin'
+    item = Item.new(Services::Scrapper.scrap(url1))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  end
+end
+sub_category = 'fatboy'
+
+urls = []
+
+urls << "https://www.ambientedirect.com/fr/fatboy/fatboy-lamzac-the-original-outdoor-sofa_pid_688_1256955.html?adgt_source=gmc&adgt_medium=product&adgt_campaign=fr&adgt_content=193078&src=gmc&lan=fr&shop_country=fr&art=193078&gclid=CLbl0dLy7tICFYYcGwodHZ0FfA&aff=gmc"
+urls << "https://www.bigberthaoriginal.fr/products/lime-green-big-bertha-nylon-bean-bag?utm_medium=cpc&utm_source=googlepla&variant=707556855&gclid=CLv3oufy7tICFTYz0wod8BYBBw"
+urls << "https://www.leroymerlin.fr/v3/p/produits/pouf-de-sol-gris-lounge-e1400794760"
+urls << "https://www.leroymerlin.fr/v3/p/produits/pouf-de-jardin-en-tissu-berlingot-blanc-e1400273381"
+urls.each do |url|
+  if url.spit('.')[1] == 'leroymerlin'
+    item = Item.new(Services::Scrapper.scrap(url1))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  end
+end
+sub_category = 'chaise longue'
+
+urls = []
+
+urls << "https://www.leroymerlin.fr/v3/p/produits/bain-de-soleil-de-jardin-en-bois-porto-brun-e126243"
+urls << "https://www.leroymerlin.fr/v3/p/produits/bain-de-soleil-de-jardin-en-acier-transabed-acier-e159134#&xtmc=chaise_longue&xtcr=7"
+urls << "https://www.leroymerlin.fr/v3/p/produits/transat-de-jardin-en-acier-maxi-transat-graphite-e1500487926#&xtmc=transat&xtcr=1"
+urls << "https://www.leroymerlin.fr/v3/p/produits/transat-de-jardin-en-acier-maxi-transat-potiron-e1400904060#&xtmc=transat&xtcr=2"
+urls << "https://www.leroymerlin.fr/v3/p/produits/transat-de-jardin-en-acier-maxi-transat-bleu-arctic-e1500487922#&xtmc=transat&xtcr=4"
+urls << "https://www.leroymerlin.fr/v3/p/produits/chilienne-de-jardin-en-tissu-lola-gris-dore-e1401431390#&xtmc=transat&xtcr=6"
+urls << "https://www.leroymerlin.fr/v3/p/produits/chilienne-de-jardin-en-tissu-lola-blanc-ivoire-e1401431405#&xtmc=transat&xtcr=8"
+urls << "https://www.leroymerlin.fr/v3/p/produits/chilienne-de-jardin-en-tissu-editeur-sable-e1401431417#&xtmc=transat&xtcr=35"
+urls << "https://www.leroymerlin.fr/v3/p/produits/toile-de-transat-amovible-en-tissu-toile-de-rechange-maxi-transat-seigle-e1500620042#&xtmc=transat&xtcr=48"
+urls.each do |url|
+  if url.spit('.')[1] == 'leroymerlin'
+    item = Item.new(Services::Scrapper.scrap(url1))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  end
+end
+sub_category = 'Table + chaise'
+
+urls = []
+
+urls << "https://www.leroymerlin.fr/v3/p/produits/salon-de-jardin-acacia-bois-marron-1-table-et-2-chaises-e1401421472"
+urls << "https://www.delamaison.fr/salon-pour-balcon-places-table-60x53m-chaises-p-136672.html#p=192221"
+
+category = 'De Ranger'
+urls.each do |url|
+  if url.spit('.')[1] == 'leroymerlin'
+    item = Item.new(Services::Scrapper.scrap(url1))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  end
+end
+sub_category = 'Coffre'
+
+urls = []
+
+urls << "https://www.delamaison.fr/coffre-rangement-aluminium-resine-tressee-avec-roulettes-435l-atlas-p-210871.html"
+urls << "https://www.leroymerlin.fr/v3/p/produits/coffre-de-jardin-resine-flint-gris-anthracite-l-117-5-x-h-57-x-p-45-cm-e1400035076#&xtmc=coffre_exterieur&xtcr=1"
+urls << "https://www.leroymerlin.fr/v3/p/produits/coffre-de-jardin-resine-circa-rattan-gris-anthracite-l-68-x-h-42-x-p-68-cm-e1401421709#&xtmc=coffre_exterieur&xtcr=21"
+urls << "https://www.leroymerlin.fr/v3/p/produits/coffre-de-jardin-resine-eden-garden-bench-gris-noir-l-140-x-h-84-x-p-60-cm-e1401421708#&xtmc=coffre_exterieur&xtcr=22"
+urls << "https://www.delamaison.fr/table-jardin-120x70cm-cante-p-200252.html"
+urls.each do |url|
+  if url.spit('.')[1] == 'leroymerlin'
+    item = Item.new(Services::Scrapper.scrap(url1))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  end
+end
+sub_category = 'Seche linge exterieur'
+
+urls = []
+
+urls << "https://www.delamaison.fr/sechoir-linge-etendoir-interieurexterieur-pliable-ailes-laterales-niveaux-homcom-p-211916.html"
+urls << "https://www.leroymerlin.fr/v3/p/produits/etendoir-radiateur-blanc-gris-azur-e1401371375#&xtmc=tancarville&xtcr=15"
+urls << "https://www.leroymerlin.fr/v3/p/produits/etendoir-radiateur-blanc-bleu-azur-e1401371363#&xtmc=tancarville&xtcr=18"
+urls << "https://www.leroymerlin.fr/v3/p/produits/etendoir-tour-blanc-bleu-ulyss-e1401371381#&xtmc=tancarville&xtcr=1"
+urls << "https://www.leroymerlin.fr/v3/p/produits/etendoir-tour-blanc-bleu-azur-e1401371371#&xtmc=tancarville&xtcr=6"
+"http://www.autourdulinge.fr/?fond=produit&ref=130081&id_rubrique=79"
 
 
+category = 'De Recevoir'
+urls.each do |url|
+  if url.spit('.')[1] == 'leroymerlin'
+    item = Item.new(Services::Scrapper.scrap(url1))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  end
+end
+sub_category = 'Verres'
+
+urls = []
+
+urls << "https://www.alicedelice.com/verre-a-cocktail/mug-a-orangeade-en-verre-450-ml-1016594.html"
+urls << "https://www.alicedelice.com/verre-a-cocktail/mug-a-orangeade-450-ml-1017206.html"
+urls << "https://www.alicedelice.com/verre-a-vin/set-6-verres-vin-rouge-open-up-pro-tasting-1018215.html"
+urls << "https://www.alicedelice.com/verre-a-vin/set-6-verres-vin-blanc-open-up-pro-tasting-37cl-1018226.html"
+urls << "https://www.alicedelice.com/verre-a-eau/set-6-gobelets-en-verre-picardie-16cl--1017324.html"
+urls << "https://www.alicedelice.com/flute-a-champagne/set-6-flutes-a-champagne-1018213.html"
+urls << "https://www.alicedelice.com/assiettes/1-assiette-a-risotto-1010928.html"
+urls.each do |url|
+  if url.spit('.')[1] == 'leroymerlin'
+    item = Item.new(Services::Scrapper.scrap(url1))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  end
+end
+sub_category = 'Assiettes'
+
+urls = []
+
+urls << "https://www.alicedelice.com/assiettes/1-assiette-a-risotto-1010928.html"
+urls << "https://www.alicedelice.com/assiettes/8-assiettes-pirate-1017016.html"
+urls << "https://www.alicedelice.com/assiettes/8-assiettes-princesse-1017017.html"
+urls.each do |url|
+  if url.spit('.')[1] == 'leroymerlin'
+    item = Item.new(Services::Scrapper.scrap(url1))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  end
+end
+sub_category = 'Apéritif'
+
+urls = []
+
+urls << "https://www.alicedelice.com/pic-aperitif/250-piques-aperitif-1011966.html"
+urls << "https://www.alicedelice.com/coffret-aperitif/coffret-aperitif-dinatoire-19-pieces-1010924.html"
+urls << "https://www.alicedelice.com/coffret-cocktail/coffret-mojito-addict-3-melanges-1011428.html"
+urls << "https://www.alicedelice.com/assiette-ardoise/coffret-6-assiettes-ardoises-21-x-13-1010984.html"
+urls << "https://www.alicedelice.com/accessoires-cocktails/shaker-a-cocktail-inox-1012269.html"
+
+
+category = 'De Cuisiner'
+urls.each do |url|
+  if url.spit('.')[1] == 'leroymerlin'
+    item = Item.new(Services::Scrapper.scrap(url1))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  end
+end
+sub_category = 'barbecue'
+
+urls = []
+
+urls << "https://www.leroymerlin.fr/v3/p/produits/barbecue-electrique-weber-weber-q-1400-stand-e1400767856#&xtmc=barbecue&xtcr=3"
+urls << "https://www.leroymerlin.fr/v3/p/produits/barbecue-au-gaz-weber-spirit-e0-210-noir-e1401400700#&xtmc=barbecue&xtcr=5"
+urls << "https://www.leroymerlin.fr/v3/p/produits/barbecue-au-gaz-weber-q2000-titanium-e1400767819#&xtmc=barbecue&xtcr=11"
+urls << "https://www.leroymerlin.fr/v3/p/produits/barbecue-electrique-weber-weber-q-2400-e1400077450#&xtmc=barbecue&xtcr=34"
+urls << "https://www.leroymerlin.fr/v3/p/produits/barbecue-electrique-paname-gris-e1400077426#&xtmc=barbecue&xtcr=46"
+urls << "https://www.delamaison.fr/barbecue-charbon-nomade-longueur-44cm-anywhere-p-205766.html"
+urls.each do |url|
+  if url.spit('.')[1] == 'leroymerlin'
+    item = Item.new(Services::Scrapper.scrap(url1))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  end
+end
+sub_category = 'Plancha'
+
+urls = []
+
+urls << "https://www.alicedelice.com/cuisson/plancha-electrique-1014864.html"
+urls << "https://www.alicedelice.com/plancha/plancha-prestige-600-1014866.html"
+urls << "https://www.alicedelice.com/plancha/chariot-pour-plancha-prestige-600-1014868.html"
+urls.each do |url|
+  if url.spit('.')[1] == 'leroymerlin'
+    item = Item.new(Services::Scrapper.scrap(url1))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  end
+end
+sub_category = 'Accessoire barbecue'
+
+urls = []
+
+urls << "https://www.leroymerlin.fr/v3/p/produits/set-d-accessoires-de-cuisson-weber-e148940"
+urls << "https://www.leroymerlin.fr/v3/p/produits/housse-de-protection-pour-barbecue-weber-l-65-5-x-l-132-x-h-108-7-cm-e1401427264"
+urls << "https://www.leroymerlin.fr/v3/p/produits/brosse-weber-e166863"
+urls << "https://www.leroymerlin.fr/v3/p/produits/brosse-bois-weber-e33510"
+urls.each do |url|
+  if url.spit('.')[1] == 'leroymerlin'
+    item = Item.new(Services::Scrapper.scrap(url1))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  end
+end
+sub_category = 'Pierrade'
+
+urls = []
+
+urls.each do |url|
+  if url.spit('.')[1] == 'leroymerlin'
+    item = Item.new(Services::Scrapper.scrap(url1))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  end
+end
+sub_category = 'Accessoire Cuisine'
+
+urls = []
+
+urls << "https://www.alicedelice.com/1124-preparer-decouper"
+
+category = 'De Cultiver'
+urls.each do |url|
+  if url.spit('.')[1] == 'leroymerlin'
+    item = Item.new(Services::Scrapper.scrap(url1))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  end
+end
+sub_category = 'pots'
+
+urls = []
+
+urls << "https://www.leroymerlin.fr/v3/p/produits/pot-polypropylene-eda-l-39-x-l-39-x-h-65-cm-gris-anthracite-e156822"
+urls << "https://www.leroymerlin.fr/v3/p/produits/pot-polypropylene-eda-diam-80-x-h-67-cm-gris-anthracite-e156995"
+urls << "https://www.leroymerlin.fr/v3/p/produits/pot-polypropylene-eda-diam-80-x-h-67-cm-rouge-rubis-e1401628808"
+urls << "https://www.leroymerlin.fr/v3/p/produits/pot-polypropylene-naterial-diam-39-62-l-39-62-x-l-39-62-x-h-33-45-cm-anthracite-e1400066070"
+urls << "https://www.leroymerlin.fr/v3/p/produits/pot-polypropylene-eda-diam-80-x-h-67-cm-prune-e1400773036"
+urls << "https://www.leroymerlin.fr/v3/p/produits/pot-polypropylene-naterial-diam-22-04-l-22-04-x-l-22-04-x-h-18-61-cm-anthracite-e1400066092"
+urls << "https://www.leroymerlin.fr/v3/p/produits/pot-polyethylene-naterial-diam-39-l-39-x-l-39-x-h-74-cm-noir-e1400066114"
+urls << "https://www.leroymerlin.fr/v3/p/produits/pot-polypropylene-naterial-diam-29-79-l-29-79-x-l-29-79-x-h-25-15-cm-terre-cuite-e1400066069"
+urls << "https://www.leroymerlin.fr/v3/p/produits/pot-terre-cuite-deroma-diam-35-7-x-h-29-5-cm-terre-cuite-rouge-e138756"
+urls << "https://www.leroymerlin.fr/v3/p/produits/pot-fibre-l-35-x-l-35-x-h-51-cm-gris-clair-e48505"
+urls << "https://www.leroymerlin.fr/v3/p/produits/pot-terre-cuite-deroma-diam-9-x-h-8-5-cm-terre-cuite-rouge-e138754"
+urls << "https://www.lightonline.fr/guirlande-et-objet-lumineux/3266/slide-il-vaso-pot-lumineux-exterieur-h75cm"
+urls.each do |url|
+  if url.spit('.')[1] == 'leroymerlin'
+    item = Item.new(Services::Scrapper.scrap(url1))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  end
+end
+sub_category = 'graines'
+
+urls = []
+
+urls << "https://www.leroymerlin.fr/v3/p/produits/ciboulette-civette-vilmorin-1-5-g-e149220"
+urls << "https://www.leroymerlin.fr/v3/p/produits/basilic-grand-vert-vilmorin-2-g-e149120"
+urls << "https://www.leroymerlin.fr/v3/p/produits/radis-de-18-jours-vilmorin-10-g-e149382"
+urls << "https://www.leroymerlin.fr/v3/p/produits/tomate-coeur-de-boeuf-vilmorin-0-2-g-e149160"
+urls.each do |url|
+  if url.spit('.')[1] == 'leroymerlin'
+    item = Item.new(Services::Scrapper.scrap(url1))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  end
+end
+sub_category = 'potager'
+
+urls = []
+
+urls << "https://www.leroymerlin.fr/v3/p/produits/potager-sur-pieds-gariguette-naturel-l-120-x-l-57-x-h-20-cm-e1400989076?queryredirect=a_fp_potager_sur_pieds_gariguette_naturel_l_120_x_l_57_x_h_20_cm&numpage=1"
+urls << "https://www.leroymerlin.fr/v3/p/produits/potager-sur-pieds-eda-plastiques-gris-l-76-x-l-38-5-x-h-68-cm-e1500270358?queryredirect=a_fp_potager_sur_pieds_eda_plastiques_gris_l_76_x_l_38_5_x_h_68_cm&numpage=1"
+urls << "https://www.leroymerlin.fr/v3/p/produits/potager-sur-pieds-eda-plastiques-vert-l-76-x-l-38-5-x-h-68-cm-e1500270360?queryredirect=a_fp_potager_sur_pieds_eda_plastiques_vert_l_76_x_l_38_5_x_h_68_cm&numpage=1"
+urls << "https://www.leroymerlin.fr/v3/p/produits/carre-potager-forest-avenue-noisetier-naturel-l-90-x-l-90-x-h-35-cm-e87682#&xtmc=carre_potager&xtcr=13"
+urls.each do |url|
+  if url.spit('.')[1] == 'leroymerlin'
+    item = Item.new(Services::Scrapper.scrap(url1))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  end
+end
+sub_category = 'terreau'
+
+urls = []
+
+urls << "https://www.leroymerlin.fr/v3/p/produits/terreau-balcons-et-terrasse-or-brun-20-l-e1400992545"
+urls.each do |url|
+  if url.spit('.')[1] == 'leroymerlin'
+    item = Item.new(Services::Scrapper.scrap(url1))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  end
+end
+sub_category = 'accessoire jardinage'
+
+urls = []
+
+urls << "https://www.leroymerlin.fr/v3/p/produits/transplantoir-inox-geolia-ergo-e1400603218"
+urls << "https://www.leroymerlin.fr/v3/p/produits/lot-petits-outils-acier-e1400888290"
+urls << "https://www.leroymerlin.fr/v3/p/produits/lot-petits-outils-acier-outils-wolf-bt51-e166912"
+urls << "https://www.leroymerlin.fr/v3/p/produits/pelle-a-terreau-inox-geolia-ergo-e1400603212"
+urls << "https://www.leroymerlin.fr/v3/p/produits/plantoir-a-bulbes-acier-gardena-3412-20-e165409"
+urls << "https://www.leroymerlin.fr/v3/p/produits/binette-acier-geolia-nature-e1400459347"
+urls.each do |url|
+  if url.spit('.')[1] == 'leroymerlin'
+    item = Item.new(Services::Scrapper.scrap(url1))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  end
+end
+sub_category = 'équipements (tablier gant etc..)'
+
+urls = []
+
+urls << "https://www.leroymerlin.fr/v3/p/produits/tablier-cordeline-tradex-vert-taille-unique-e1401571173"
+urls << "https://www.leroymerlin.fr/v3/p/produits/tablier-cordeline-tradex-chocolat-taille-unique-e1401571174"
+urls << "https://www.leroymerlin.fr/v3/p/produits/tablier-cordeline-tradex-fushia-taille-unique-e1401571172"
+urls << "https://www.leroymerlin.fr/v3/p/produits/tablier-cordeline-tradex-taupe-taille-unique-e1401571169"
+urls.each do |url|
+  if url.spit('.')[1] == 'leroymerlin'
+    item = Item.new(Services::Scrapper.scrap(url1))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  end
+end
+sub_category = 'composte'
+
+urls = []
+
+urls << "https://www.leroymerlin.fr/v3/p/produits/composteur-monobloc-250-l-e136814#&xtmc=composteur&xtcr=7"
+urls.each do |url|
+  if url.spit('.')[1] == 'leroymerlin'
+    item = Item.new(Services::Scrapper.scrap(url1))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  end
+end
+sub_category = 'lecture'
+
+urls = []
+
+urls << "https://www.leroymerlin.fr/v3/p/produits/un-potager-sur-mon-balcon-larousse-e155388#&xtmc=balcon&xtcr=17"
+urls << "https://www.leroymerlin.fr/v3/p/produits/un-potager-dans-un-mini-jardin-sur-un-balcon-ou-un-appui-de-fenetre-marabout-e155323#&xtmc=balcon&xtcr=20"
+urls.each do |url|
+  if url.spit('.')[1] == 'leroymerlin'
+    item = Item.new(Services::Scrapper.scrap(url1))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  end
+end
+sub_category = 'serre'
+
+urls = []
+
+urls << "https://www.leroymerlin.fr/v3/p/produits/serre-de-balcon-nortene-l-31-x-p-19-x-h-105-cm-e38966#&xtmc=balcon&xtcr=29"
+
+category = 'De Me Proteger'
+urls.each do |url|
+  if url.spit('.')[1] == 'leroymerlin'
+    item = Item.new(Services::Scrapper.scrap(url1))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  end
+end
+sub_category = 'Parasol'
+
+urls = []
+
+urls << "https://www.leroymerlin.fr/v3/p/produits/parasol-balcon-leo-rose-rectangulaire-l-300-x-l-150-cm-e1400703077#&xtmc=balcon&xtcr=1"
+urls << "https://www.leroymerlin.fr/v3/p/produits/parasol-balcon-leo-taupe-rectangulaire-l-300-x-l-150-cm-e1400027447#&xtmc=balcon&xtcr=22"
+urls << "https://www.leroymerlin.fr/v3/p/produits/parasol-balcon-leo-gris-rectangulaire-l-300-x-l-150-cm-e1400027449#&xtmc=balcon&xtcr=23"
+urls << "https://www.leroymerlin.fr/v3/p/produits/parasol-balcon-leo-vert-anis-rectangulaire-l-300-x-l-150-cm-e1400027446#&xtmc=balcon&xtcr=24"
+urls << "https://www.leroymerlin.fr/v3/p/produits/parasol-balcon-leo-ecru-rectangulaire-l-300-x-l-150-cm-e1400027450#&xtmc=balcon&xtcr=25"
+urls.each do |url|
+  if url.spit('.')[1] == 'leroymerlin'
+    item = Item.new(Services::Scrapper.scrap(url1))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  end
+end
+sub_category = 'Panneau occultant'
+
+urls = []
+
+urls << "https://www.leroymerlin.fr/v3/p/produits/terrasse-jardin/grillage-canisse-panneau-cloture-et-palissade/panneau-occultant-barriere-et-palissade-bois-composite-l1308217606#"
+urls << "https://www.leroymerlin.fr/v3/p/produits/panneau-treillis-bois-ajoure-selva-l-180-cm-x-h-180-cm-gris-e1400236923"
+urls << "https://www.leroymerlin.fr/v3/p/produits/panneau-bois-ajoure-l-78-cm-x-h-150-cm-marron-e1400793912"
+urls << "https://www.leroymerlin.fr/v3/p/produits/treillage-fixe-droite-n10703-l-60-x-h-120-x-p-0-6-cm-e1401630379"
+urls.each do |url|
+  if url.spit('.')[1] == 'leroymerlin'
+    item = Item.new(Services::Scrapper.scrap(url1))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  end
+end
+sub_category = 'Store Occultant'
+
+urls = []
+
+urls << "https://www.leroymerlin.fr/v3/p/produits/store-de-balcon-manuel-balcony-artens-semi-coffre-l-0-9-m-x-avancee-3-m-e56965#&xtmc=balcon&xtcr=7"
+
+category = "De m'éclairer PE"
+urls.each do |url|
+  if url.spit('.')[1] == 'leroymerlin'
+    item = Item.new(Services::Scrapper.scrap(url1))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  end
+end
+sub_category = 'Spot'
+
+urls = []
+
+urls << "https://www.lightonline.fr/luminaire-exterieur/7530/brilliant-chorus-applique-exterieur-inox-h36cm"
+urls << "https://www.leroymerlin.fr/v3/p/produits/applique-descendante-exterieure-riga-e27-60-w-galvanise-inspire-e102325"
+urls << "https://www.leroymerlin.fr/v3/p/produits/applique-descendante-exterieure-pando-led-integree-11w-900lm-anthracite-inspire-e1400887482"
+urls << "https://www.leroymerlin.fr/v3/p/produits/applique-exterieure-belem-gu10-35-w-acier-inspire-e102332"
+urls << "https://www.leroymerlin.fr/v3/p/produits/demi-applique-exterieure-montreal-e27-40-w-inox-inspire-e156526"
+urls << "https://www.leroymerlin.fr/v3/p/produits/applique-exterieure-malambo-led-integree-50-w-630-lm-gris-inspire-e1400887476"
+urls << "https://www.leroymerlin.fr/v3/p/produits/applique-descendante-exterieure-neiva-gu10-35-w-blanc-inspire-e1400887625"
+urls.each do |url|
+  if url.spit('.')[1] == 'leroymerlin'
+    item = Item.new(Services::Scrapper.scrap(url1))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  end
+end
+sub_category = 'Lumiere design blanche sur batterie'
+
+urls = []
+
+urls << "https://www.delamaison.fr/lampadaire-lumineux-decoratif-exterieur-lola-p-133499.html"
+urls << "https://www.lightonline.fr/luminaire-exterieur/18777/fermob-balad-lampe-nomade-led-exterieur-muscade-h25cm"
+urls << "https://www.delamaison.fr/boule-lumineuse-exterieure-polyethylene-blanc-buly-p-180801.html"
+urls << "https://www.lightonline.fr/luminaire-exterieur/19905/fatboy-bolleke-suspension-led-rechargeable-exterieur-rouge-%C3%9820cm"
+urls << "https://www.lightonline.fr/luminaire-exterieur/16177/best-season-lantern-lanterne-exterieur-metal-blanc-bougie-led-h32cm"
+urls << "https://www.leroymerlin.fr/v3/p/produits/lampadaire-exterieur-lola-165-cm-e27-25-w-880-lm-blanc-newgarden-e1400699138#&xtmc=luminaire_exterieure&xtcr=1"
+urls << "https://www.leroymerlin.fr/v3/p/produits/lampe-de-table-exterieure-lola-45-cm-e27-25-w-880-lm-blanc-newgarden-e1400699131"
+urls << "https://www.leroymerlin.fr/v3/p/produits/boule-decorative-exterieure-buly-40-cm-e27-25-w-880-lm-blanc-newgarden-e1400699141"
+
+category = 'De Refaire mon sol'
+urls.each do |url|
+  if url.spit('.')[1] == 'leroymerlin'
+    item = Item.new(Services::Scrapper.scrap(url1))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  end
+end
+sub_category = 'Moquette herbe'
+
+urls = []
+
+urls << "https://www.leroymerlin.fr/v3/p/produits/gazon-artificiel-gazon-artif-softy-2m-x-4ml-au-rouleau-2-x-4-m-e1500536302"
+urls << "https://www.leroymerlin.fr/v3/p/produits/gazon-artificiel-oraverde-au-rouleau-1-x-5-m-e1400094597"
+urls << "https://www.leroymerlin.fr/v3/p/produits/dalle-clipsable-gazon-synthetique-vert-l-30-x-l-30-cm-x-ep-30-mm-e165680"
+urls.each do |url|
+  if url.spit('.')[1] == 'leroymerlin'
+    item = Item.new(Services::Scrapper.scrap(url1))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  end
+end
+sub_category = 'Caillebotis'
+
+urls = []
+
+urls << "https://www.leroymerlin.fr/v3/p/produits/dalle-bois-hevea-l-50-x-l-50-cm-x-ep-40-mm-e1401292981"
+urls << "https://www.leroymerlin.fr/v3/p/produits/dalle-bois-bankirai-l-50-x-l-50-cm-x-ep-24-mm-e1401132185"
+urls << "https://www.leroymerlin.fr/v3/p/produits/lot-de-4-dalles-clipsables-bois-snap-amp-go-marron-naturel-l-30-x-l-30-cm-x-ep-e1400797929"
+urls << "https://www.leroymerlin.fr/v3/p/produits/dalle-bois-hevea-l-100-x-l-100-cm-x-ep-40-mm-e1500280938"
+urls.each do |url|
+  if url.spit('.')[1] == 'leroymerlin'
+    item = Item.new(Services::Scrapper.scrap(url1))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  end
+end
+sub_category = 'Terrasse teck'
+
+urls = []
+
+urls << "https://www.leroymerlin.fr/v3/p/produits/planche-composite-grafik-2-noir-anthracite-l-400-x-l-18-6-cm-x-ep-26-mm-e1401291591"
 
 
 # category:  ,
