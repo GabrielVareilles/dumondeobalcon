@@ -52,8 +52,8 @@
           </div>
           <div class="m-b-30">
             <h2 class="montserrat">
-              <span class="sale-text"> <%= (@item.price)*0.9 %> </span>
-              <%= @item.price %>
+              <span class="sale-text"> <%= humanized_money_with_symbol(@item.price)*0.9 %> </span>
+              <%= humanized_money_with_symbol(@item.price) %>
             </h2>
           </div>
           <hr class="m-t-30 m-b-30">
