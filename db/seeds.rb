@@ -872,7 +872,7 @@ sub_category = 'Panneau occultant'
 
 urls = []
 
-urls << "https://www.leroymerlin.fr/v3/p/produits/terrasse-jardin/grillage-canisse-panneau-cloture-et-palissade/panneau-occultant-barriere-et-palissade-bois-composite-l1308217606#"
+# urls << "https://www.leroymerlin.fr/v3/p/produits/terrasse-jardin/grillage-canisse-panneau-cloture-et-palissade/panneau-occultant-barriere-et-palissade-bois-composite-l1308217606#"
 urls << "https://www.leroymerlin.fr/v3/p/produits/panneau-treillis-bois-ajoure-selva-l-180-cm-x-h-180-cm-gris-e1400236923"
 urls << "https://www.leroymerlin.fr/v3/p/produits/panneau-bois-ajoure-l-78-cm-x-h-150-cm-marron-e1400793912"
 urls << "https://www.leroymerlin.fr/v3/p/produits/treillage-fixe-droite-n10703-l-60-x-h-120-x-p-0-6-cm-e1401630379"
