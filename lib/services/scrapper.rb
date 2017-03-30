@@ -21,6 +21,33 @@ module Services
 
         return data
       end
+
+      def scrap_alice(url)
+        file = open(url)
+        doc = Nokogiri::HTML(file)
+        data = {}
+
+        data[:price] = doc.search('#our_price_display').text.gsub(',', '.').to_f * 100
+        data[:name] = doc.search('h1.product-name').first.text
+        data[:description] = doc.search('.full-content').text
+
+        data[:photo_url] = doc.search('#image-block').search('img').attribute('src').value
+        return data
+      end
+
+      def scrap_delamaison(url)
+        file = open(url)
+        doc = Nokogiri::HTML(file)
+        data = {}
+
+        data[:price] = 80
+        data[:name] = doc.search('.head-title-product h1').text.strip
+        data[:description] = " "
+
+        data[:photo_url] = doc.search('.swiper-slide a').attribute('href').value
+
+        return doc
+      end
     end
   end
 end

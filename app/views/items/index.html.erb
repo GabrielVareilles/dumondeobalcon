@@ -80,7 +80,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12 text-center">
-          <h3 class="montserrat text-uppercase m-t-40">The balcony boutique</h3>
+          <h3 class="montserrat text-uppercase m-t-40">J'ai besoin de profiter</h3>
           <!-- PORTFOLIO FILTERS -->
     			<div class="row">
     				<div class="col-sm-12">
@@ -108,8 +108,8 @@
 				<div id="works-grid" class="works-grid works-grid-4">
 
           <!-- PORTFOLIO ITEM -->
-          <% Item.all.each do |item| %>
-  					<article class="work-item <%= item.category.downcase %>" style="padding: 20px 20px 40px 20px;">
+          <% Item.where(category: 'De Profiter').each do |item| %>
+  					<article class="work-item <%= item.sub_category.downcase %>" style="padding: 20px 20px 40px 20px;">
   						<div class="work-wrapper">
                 <%= image_tag item.attributes['photo_url']%>
   							<div class="work-overlay">

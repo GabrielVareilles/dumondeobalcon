@@ -412,6 +412,16 @@ urls.each do |url|
     item.category = category
     item.sub_category = sub_category
     item.save!
+  elsif url.split('.')[1] == 'alicedelice'
+    item = Item.new(Services::Scrapper.scrap_alice(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  elsif url.split('.')[1] == 'delamaison'
+    item = Item.new(Services::Scrapper.scrap_delamaison(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
   end
 end
 sub_category = 'Table'
@@ -428,6 +438,16 @@ urls << "https://www.delamaison.fr/table-balcon-pliante-rabattable-acier-hauteur
 urls.each do |url|
   if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  elsif url.split('.')[1] == 'alicedelice'
+    item = Item.new(Services::Scrapper.scrap_alice(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  elsif url.split('.')[1] == 'delamaison'
+    item = Item.new(Services::Scrapper.scrap_delamaison(url))
     item.category = category
     item.sub_category = sub_category
     item.save!
@@ -451,6 +471,16 @@ urls.each do |url|
     item.category = category
     item.sub_category = sub_category
     item.save!
+  elsif url.split('.')[1] == 'alicedelice'
+    item = Item.new(Services::Scrapper.scrap_alice(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  elsif url.split('.')[1] == 'delamaison'
+    item = Item.new(Services::Scrapper.scrap_delamaison(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
   end
 end
 sub_category = 'fauteuil & canapé'
@@ -463,6 +493,16 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/salon-bas-de-jardin-portovecch
 urls.each do |url|
   if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  elsif url.split('.')[1] == 'alicedelice'
+    item = Item.new(Services::Scrapper.scrap_alice(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  elsif url.split('.')[1] == 'delamaison'
+    item = Item.new(Services::Scrapper.scrap_delamaison(url))
     item.category = category
     item.sub_category = sub_category
     item.save!
@@ -483,6 +523,16 @@ urls.each do |url|
     item.category = category
     item.sub_category = sub_category
     item.save!
+  elsif url.split('.')[1] == 'alicedelice'
+    item = Item.new(Services::Scrapper.scrap_alice(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  elsif url.split('.')[1] == 'delamaison'
+    item = Item.new(Services::Scrapper.scrap_delamaison(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
   end
 end
 sub_category = 'fatboy'
@@ -496,6 +546,16 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/pouf-de-jardin-en-tissu-berlin
 urls.each do |url|
   if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  elsif url.split('.')[1] == 'alicedelice'
+    item = Item.new(Services::Scrapper.scrap_alice(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  elsif url.split('.')[1] == 'delamaison'
+    item = Item.new(Services::Scrapper.scrap_delamaison(url))
     item.category = category
     item.sub_category = sub_category
     item.save!
@@ -520,6 +580,16 @@ urls.each do |url|
     item.category = category
     item.sub_category = sub_category
     item.save!
+  elsif url.split('.')[1] == 'alicedelice'
+    item = Item.new(Services::Scrapper.scrap_alice(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  elsif url.split('.')[1] == 'delamaison'
+    item = Item.new(Services::Scrapper.scrap_delamaison(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
   end
 end
 sub_category = 'Table + chaise'
@@ -533,6 +603,16 @@ category = 'De Ranger'
 urls.each do |url|
   if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  elsif url.split('.')[1] == 'alicedelice'
+    item = Item.new(Services::Scrapper.scrap_alice(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  elsif url.split('.')[1] == 'delamaison'
+    item = Item.new(Services::Scrapper.scrap_delamaison(url))
     item.category = category
     item.sub_category = sub_category
     item.save!
@@ -550,6 +630,16 @@ urls << "https://www.delamaison.fr/table-jardin-120x70cm-cante-p-200252.html"
 urls.each do |url|
   if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  elsif url.split('.')[1] == 'alicedelice'
+    item = Item.new(Services::Scrapper.scrap_alice(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  elsif url.split('.')[1] == 'delamaison'
+    item = Item.new(Services::Scrapper.scrap_delamaison(url))
     item.category = category
     item.sub_category = sub_category
     item.save!
@@ -574,6 +664,16 @@ urls.each do |url|
     item.category = category
     item.sub_category = sub_category
     item.save!
+  elsif url.split('.')[1] == 'alicedelice'
+    item = Item.new(Services::Scrapper.scrap_alice(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  elsif url.split('.')[1] == 'delamaison'
+    item = Item.new(Services::Scrapper.scrap_delamaison(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
   end
 end
 sub_category = 'Verres'
@@ -593,6 +693,16 @@ urls.each do |url|
     item.category = category
     item.sub_category = sub_category
     item.save!
+  elsif url.split('.')[1] == 'alicedelice'
+    item = Item.new(Services::Scrapper.scrap_alice(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  elsif url.split('.')[1] == 'delamaison'
+    item = Item.new(Services::Scrapper.scrap_delamaison(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
   end
 end
 sub_category = 'Assiettes'
@@ -605,6 +715,16 @@ urls << "https://www.alicedelice.com/assiettes/8-assiettes-princesse-1017017.htm
 urls.each do |url|
   if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  elsif url.split('.')[1] == 'alicedelice'
+    item = Item.new(Services::Scrapper.scrap_alice(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  elsif url.split('.')[1] == 'delamaison'
+    item = Item.new(Services::Scrapper.scrap_delamaison(url))
     item.category = category
     item.sub_category = sub_category
     item.save!
@@ -628,6 +748,16 @@ urls.each do |url|
     item.category = category
     item.sub_category = sub_category
     item.save!
+  elsif url.split('.')[1] == 'alicedelice'
+    item = Item.new(Services::Scrapper.scrap_alice(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  elsif url.split('.')[1] == 'delamaison'
+    item = Item.new(Services::Scrapper.scrap_delamaison(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
   end
 end
 sub_category = 'barbecue'
@@ -646,6 +776,16 @@ urls.each do |url|
     item.category = category
     item.sub_category = sub_category
     item.save!
+  elsif url.split('.')[1] == 'alicedelice'
+    item = Item.new(Services::Scrapper.scrap_alice(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  elsif url.split('.')[1] == 'delamaison'
+    item = Item.new(Services::Scrapper.scrap_delamaison(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
   end
 end
 sub_category = 'Plancha'
@@ -658,6 +798,16 @@ urls << "https://www.alicedelice.com/plancha/chariot-pour-plancha-prestige-600-1
 urls.each do |url|
   if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  elsif url.split('.')[1] == 'alicedelice'
+    item = Item.new(Services::Scrapper.scrap_alice(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  elsif url.split('.')[1] == 'delamaison'
+    item = Item.new(Services::Scrapper.scrap_delamaison(url))
     item.category = category
     item.sub_category = sub_category
     item.save!
@@ -677,6 +827,16 @@ urls.each do |url|
     item.category = category
     item.sub_category = sub_category
     item.save!
+  elsif url.split('.')[1] == 'alicedelice'
+    item = Item.new(Services::Scrapper.scrap_alice(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  elsif url.split('.')[1] == 'delamaison'
+    item = Item.new(Services::Scrapper.scrap_delamaison(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
   end
 end
 sub_category = 'Pierrade'
@@ -686,6 +846,16 @@ urls = []
 urls.each do |url|
   if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  elsif url.split('.')[1] == 'alicedelice'
+    item = Item.new(Services::Scrapper.scrap_alice(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  elsif url.split('.')[1] == 'delamaison'
+    item = Item.new(Services::Scrapper.scrap_delamaison(url))
     item.category = category
     item.sub_category = sub_category
     item.save!
@@ -701,6 +871,16 @@ category = 'De Cultiver'
 urls.each do |url|
   if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  elsif url.split('.')[1] == 'alicedelice'
+    item = Item.new(Services::Scrapper.scrap_alice(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  elsif url.split('.')[1] == 'delamaison'
+    item = Item.new(Services::Scrapper.scrap_delamaison(url))
     item.category = category
     item.sub_category = sub_category
     item.save!
@@ -728,6 +908,16 @@ urls.each do |url|
     item.category = category
     item.sub_category = sub_category
     item.save!
+  elsif url.split('.')[1] == 'alicedelice'
+    item = Item.new(Services::Scrapper.scrap_alice(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  elsif url.split('.')[1] == 'delamaison'
+    item = Item.new(Services::Scrapper.scrap_delamaison(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
   end
 end
 sub_category = 'graines'
@@ -741,6 +931,16 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/tomate-coeur-de-boeuf-vilmorin
 urls.each do |url|
   if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  elsif url.split('.')[1] == 'alicedelice'
+    item = Item.new(Services::Scrapper.scrap_alice(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  elsif url.split('.')[1] == 'delamaison'
+    item = Item.new(Services::Scrapper.scrap_delamaison(url))
     item.category = category
     item.sub_category = sub_category
     item.save!
@@ -760,6 +960,16 @@ urls.each do |url|
     item.category = category
     item.sub_category = sub_category
     item.save!
+  elsif url.split('.')[1] == 'alicedelice'
+    item = Item.new(Services::Scrapper.scrap_alice(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  elsif url.split('.')[1] == 'delamaison'
+    item = Item.new(Services::Scrapper.scrap_delamaison(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
   end
 end
 sub_category = 'terreau'
@@ -770,6 +980,16 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/terreau-balcons-et-terrasse-or
 urls.each do |url|
   if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  elsif url.split('.')[1] == 'alicedelice'
+    item = Item.new(Services::Scrapper.scrap_alice(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  elsif url.split('.')[1] == 'delamaison'
+    item = Item.new(Services::Scrapper.scrap_delamaison(url))
     item.category = category
     item.sub_category = sub_category
     item.save!
@@ -791,6 +1011,16 @@ urls.each do |url|
     item.category = category
     item.sub_category = sub_category
     item.save!
+  elsif url.split('.')[1] == 'alicedelice'
+    item = Item.new(Services::Scrapper.scrap_alice(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  elsif url.split('.')[1] == 'delamaison'
+    item = Item.new(Services::Scrapper.scrap_delamaison(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
   end
 end
 sub_category = 'équipements (tablier gant etc..)'
@@ -807,6 +1037,16 @@ urls.each do |url|
     item.category = category
     item.sub_category = sub_category
     item.save!
+  elsif url.split('.')[1] == 'alicedelice'
+    item = Item.new(Services::Scrapper.scrap_alice(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  elsif url.split('.')[1] == 'delamaison'
+    item = Item.new(Services::Scrapper.scrap_delamaison(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
   end
 end
 sub_category = 'composte'
@@ -817,6 +1057,16 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/composteur-monobloc-250-l-e136
 urls.each do |url|
   if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  elsif url.split('.')[1] == 'alicedelice'
+    item = Item.new(Services::Scrapper.scrap_alice(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  elsif url.split('.')[1] == 'delamaison'
+    item = Item.new(Services::Scrapper.scrap_delamaison(url))
     item.category = category
     item.sub_category = sub_category
     item.save!
@@ -834,6 +1084,16 @@ urls.each do |url|
     item.category = category
     item.sub_category = sub_category
     item.save!
+  elsif url.split('.')[1] == 'alicedelice'
+    item = Item.new(Services::Scrapper.scrap_alice(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  elsif url.split('.')[1] == 'delamaison'
+    item = Item.new(Services::Scrapper.scrap_delamaison(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
   end
 end
 sub_category = 'serre'
@@ -846,6 +1106,16 @@ category = 'De Me Proteger'
 urls.each do |url|
   if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  elsif url.split('.')[1] == 'alicedelice'
+    item = Item.new(Services::Scrapper.scrap_alice(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  elsif url.split('.')[1] == 'delamaison'
+    item = Item.new(Services::Scrapper.scrap_delamaison(url))
     item.category = category
     item.sub_category = sub_category
     item.save!
@@ -866,6 +1136,16 @@ urls.each do |url|
     item.category = category
     item.sub_category = sub_category
     item.save!
+  elsif url.split('.')[1] == 'alicedelice'
+    item = Item.new(Services::Scrapper.scrap_alice(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  elsif url.split('.')[1] == 'delamaison'
+    item = Item.new(Services::Scrapper.scrap_delamaison(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
   end
 end
 sub_category = 'Panneau occultant'
@@ -882,6 +1162,16 @@ urls.each do |url|
     item.category = category
     item.sub_category = sub_category
     item.save!
+  elsif url.split('.')[1] == 'alicedelice'
+    item = Item.new(Services::Scrapper.scrap_alice(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  elsif url.split('.')[1] == 'delamaison'
+    item = Item.new(Services::Scrapper.scrap_delamaison(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
   end
 end
 sub_category = 'Store Occultant'
@@ -894,6 +1184,16 @@ category = "De m'éclairer PE"
 urls.each do |url|
   if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  elsif url.split('.')[1] == 'alicedelice'
+    item = Item.new(Services::Scrapper.scrap_alice(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  elsif url.split('.')[1] == 'delamaison'
+    item = Item.new(Services::Scrapper.scrap_delamaison(url))
     item.category = category
     item.sub_category = sub_category
     item.save!
@@ -913,6 +1213,16 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/applique-descendante-exterieur
 urls.each do |url|
   if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  elsif url.split('.')[1] == 'alicedelice'
+    item = Item.new(Services::Scrapper.scrap_alice(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  elsif url.split('.')[1] == 'delamaison'
+    item = Item.new(Services::Scrapper.scrap_delamaison(url))
     item.category = category
     item.sub_category = sub_category
     item.save!
@@ -938,6 +1248,16 @@ urls.each do |url|
     item.category = category
     item.sub_category = sub_category
     item.save!
+  elsif url.split('.')[1] == 'alicedelice'
+    item = Item.new(Services::Scrapper.scrap_alice(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  elsif url.split('.')[1] == 'delamaison'
+    item = Item.new(Services::Scrapper.scrap_delamaison(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
   end
 end
 sub_category = 'Moquette herbe'
@@ -950,6 +1270,16 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/dalle-clipsable-gazon-syntheti
 urls.each do |url|
   if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  elsif url.split('.')[1] == 'alicedelice'
+    item = Item.new(Services::Scrapper.scrap_alice(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  elsif url.split('.')[1] == 'delamaison'
+    item = Item.new(Services::Scrapper.scrap_delamaison(url))
     item.category = category
     item.sub_category = sub_category
     item.save!
@@ -969,6 +1299,16 @@ urls.each do |url|
     item.category = category
     item.sub_category = sub_category
     item.save!
+  elsif url.split('.')[1] == 'alicedelice'
+    item = Item.new(Services::Scrapper.scrap_alice(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  elsif url.split('.')[1] == 'delamaison'
+    item = Item.new(Services::Scrapper.scrap_delamaison(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
   end
 end
 sub_category = 'Terrasse teck'
@@ -979,6 +1319,16 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/planche-composite-grafik-2-noi
 urls.each do |url|
   if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  elsif url.split('.')[1] == 'alicedelice'
+    item = Item.new(Services::Scrapper.scrap_alice(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  elsif url.split('.')[1] == 'delamaison'
+    item = Item.new(Services::Scrapper.scrap_delamaison(url))
     item.category = category
     item.sub_category = sub_category
     item.save!
