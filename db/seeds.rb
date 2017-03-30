@@ -420,8 +420,8 @@ urls = []
 
 urls << "https://www.leroymerlin.fr/v3/p/produits/table-de-jardin-naterial-flore-ronde-gris-2-personnes-e157735#&xtmc=table_jardin&xtcr=3"
 urls << "https://www.leroymerlin.fr/v3/p/produits/table-de-jardin-flore-ronde-blanc-4-personnes-e157749#&xtmc=table_jardin&xtcr=4"
-urls << "https://www.leroymerlin.fr/v3/p/produits/table-de-jardin-fermob-bistro-carree-gris-orage-2-personnes-e1400704302#&xtmc=table_jardin&xtcr=12 "
-urls << "https://www.delamaison.fr/table-balcon-pliante-60x53cm-p-124037.html#p=192213 "
+urls << "https://www.leroymerlin.fr/v3/p/produits/table-de-jardin-fermob-bistro-carree-gris-orage-2-personnes-e1400704302#&xtmc=table_jardin&xtcr=12"
+urls << "https://www.delamaison.fr/table-balcon-pliante-60x53cm-p-124037.html#p=192213"
 urls << "https://www.delamaison.fr/table-jardin-pliante-acacia-gris-70x70-silverwood-p-218975.html"
 urls << "https://www.delamaison.fr/table-jardin-carree-pliante-acier-60x60cm-p-90544.html#p=159137"
 urls << "https://www.delamaison.fr/table-balcon-pliante-rabattable-acier-hauteur-115cm-bistro-p-166924.html"
