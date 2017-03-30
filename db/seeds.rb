@@ -16,370 +16,370 @@ end
 
 # We truncate the records so to regenerate the seed.
 # Each time we seed all the items are lost and recreated.
-[Department, Item, Balcony, Plant, User, Cart, Order].map(&:truncate!)
+[Item, Plant].map(&:truncate!)
 
 ##########################Department Seed###############
 
-Paris = Department.new({
-  number: 75,
-  temperature_max: 26,
-  temperature_min: 2,
-  pluviometry: 635,
-  sunshine_amount: 1662
-  })
-Paris.save
+# Paris = Department.new({
+#   number: 75,
+#   temperature_max: 26,
+#   temperature_min: 2,
+#   pluviometry: 635,
+#   sunshine_amount: 1662
+#   })
+# Paris.save
 
-Lille = Department.new({
-  number: 59,
-  temperature_max: 23,
-  temperature_min: 1,
-  pluviometry: 635,
-  sunshine_amount: 1662
-  })
-Lille.save
-
-
-##########################   USER  Seed     ###############
-
-user1 = User.new(
-email: "jojo@gmail.com",
-first_name: "Jojo",
-last_name: "La fouine",
-password: "123456",
-password_confirmation: "123456"
-)
-user1.admin = true
-user1.save!
-
-user2 = User.new(
-email: "Reneda@gmail.com",
-first_name: "Rene",
-last_name: "La Taupe",
-password: "123456",
-password_confirmation: "123456"
-)
-user2.save!
-
-user3 = User.new(
-email: "Roger@gmail.com",
-first_name: "Roger",
-last_name: "Rabbit",
-password: "123456",
-password_confirmation: "123456"
-)
-user3.save!
-
-user4 = User.new(
-email: "tintin@gmail.com",
-first_name: "Tintin",
-last_name: "Herge",
-password: "123456",
-password_confirmation: "123456"
-)
-user4.save!
-
-user5 = User.new(
-email: "Jack@gmail.com",
-first_name: "Jack",
-last_name: "Houille",
-password: "123456",
-password_confirmation: "123456"
-)
-user5.save!
-
-user6 = User.new(
-email: "billyj@gmail.com",
-first_name: "Billy",
-last_name: "Jean",
-password: "123456",
-password_confirmation: "123456"
-)
-user6.save!
-
-user7 = User.new(
-email: "Johnsmith@gmail.com",
-first_name: "John",
-last_name: "Smith",
-password: "123456",
-password_confirmation: "123456"
-)
-user7.save!
-
-user8 = User.new(
-email: "mickey@gmail.com",
-first_name: "Mickey",
-last_name: "Oneil",
-password: "123456",
-password_confirmation: "123456"
-)
-user8.save!
+# Lille = Department.new({
+#   number: 59,
+#   temperature_max: 23,
+#   temperature_min: 1,
+#   pluviometry: 635,
+#   sunshine_amount: 1662
+#   })
+# Lille.save
 
 
-user9 = User.new(
-email: "Arlette@gmail.com",
-first_name: "Arlette",
-last_name: "La Belette",
-password: "123456",
-password_confirmation: "123456"
-)
-user9.save!
+# ##########################   USER  Seed     ###############
 
-##########################   Balcony  SEED    ###############
+# user1 = User.new(
+# email: "jojo@gmail.com",
+# first_name: "Jojo",
+# last_name: "La fouine",
+# password: "123456",
+# password_confirmation: "123456"
+# )
+# user1.admin = true
+# user1.save!
 
-balcony1 = Balcony.new(
-name: "Jojo's balcony",
-model: 'small',
-address: '12 rue des tours, 59800, Lille',
-city: 'Croix',
-department: 59800,
-length: 100,
-width: 30,
-orientation: 'south',
-user_id: user1.id,
-storey: 4,
-house_type: "house"
-)
-balcony1.remote_photo_url = 'http://res.cloudinary.com/dun7rljns/image/upload/v1465992527/balcony22_bl1bva.jpg'
-balcony1.save
+# user2 = User.new(
+# email: "Reneda@gmail.com",
+# first_name: "Rene",
+# last_name: "La Taupe",
+# password: "123456",
+# password_confirmation: "123456"
+# )
+# user2.save!
 
-balcony2 = Balcony.new(
-name: "Rene's balcony",
-model: 'small',
-# 'small', 'medium', 'large'
-address: '22 rue jonquoy, 75014, Paris',
-city: 'Paris',
-department: 75014,
-length: 200,
-width: 60,
-orientation: 'North',
-user_id: user2.id,
-storey: 4,
-house_type: "flat"
-)
-balcony2.remote_photo_url = 'http://res.cloudinary.com/dun7rljns/image/upload/v1465992526/balcony15_v1qywc.jpg'
-balcony2.save
+# user3 = User.new(
+# email: "Roger@gmail.com",
+# first_name: "Roger",
+# last_name: "Rabbit",
+# password: "123456",
+# password_confirmation: "123456"
+# )
+# user3.save!
 
-balcony3 = Balcony.new(
-name: "Roger's balcony",
-model: 'small',
-# 'small', 'medium', 'large'
-address: '9 rue Charles François Dupuis, 75003 Paris',
-city: 'Paris',
-department: 75003,
-length: 400,
-width: 600,
-orientation: 'West',
-user_id: user3.id,
-storey: 6,
-house_type: "flat"
-)
-balcony3.remote_photo_url = 'http://res.cloudinary.com/dun7rljns/image/upload/v1465992527/balcony24_tbummp.jpg'
-balcony3.save
+# user4 = User.new(
+# email: "tintin@gmail.com",
+# first_name: "Tintin",
+# last_name: "Herge",
+# password: "123456",
+# password_confirmation: "123456"
+# )
+# user4.save!
 
+# user5 = User.new(
+# email: "Jack@gmail.com",
+# first_name: "Jack",
+# last_name: "Houille",
+# password: "123456",
+# password_confirmation: "123456"
+# )
+# user5.save!
 
-balcony4 = Balcony.new(
-name: "Tintin's balcony",
-model: 'medium',
-address: '4 boulevard Léon Bureau, 44200, Nantes',
-city: 'Nantes',
-department: 44200,
-length: 100,
-width: 30,
-orientation: 'south',
-user_id: user4.id,
-storey: 4,
-house_type: "house"
-)
-balcony4.remote_photo_url = 'http://res.cloudinary.com/dun7rljns/image/upload/v1466423844/balcony3_pj0luf.jpg'
-balcony4.save
+# user6 = User.new(
+# email: "billyj@gmail.com",
+# first_name: "Billy",
+# last_name: "Jean",
+# password: "123456",
+# password_confirmation: "123456"
+# )
+# user6.save!
+
+# user7 = User.new(
+# email: "Johnsmith@gmail.com",
+# first_name: "John",
+# last_name: "Smith",
+# password: "123456",
+# password_confirmation: "123456"
+# )
+# user7.save!
+
+# user8 = User.new(
+# email: "mickey@gmail.com",
+# first_name: "Mickey",
+# last_name: "Oneil",
+# password: "123456",
+# password_confirmation: "123456"
+# )
+# user8.save!
 
 
-balcony5 = Balcony.new(
-name: "Jack's balcony",
-model: 'medium',
-# 'small', 'medium', 'large'
-address: '7 rue des paradoux, 31000, Toulouse',
-city: 'Toulouse',
-department: 31000,
-length: 200,
-width: 60,
-orientation: 'North',
-user_id: user5.id,
-storey: 4,
-house_type: "flat"
-)
-balcony5.remote_photo_url = 'http://res.cloudinary.com/dun7rljns/image/upload/v1466423825/balcony5_bum7jj.jpg'
-balcony5.save
+# user9 = User.new(
+# email: "Arlette@gmail.com",
+# first_name: "Arlette",
+# last_name: "La Belette",
+# password: "123456",
+# password_confirmation: "123456"
+# )
+# user9.save!
 
-balcony6 = Balcony.new(
-name: "Billy's balcony",
-model: 'medium',
-# 'small', 'medium', 'large'
-address: '27 rue du vieil hôpital, 67000, Strasbourg',
-city: 'Strasbourg',
-department: 67000,
-length: 400,
-width: 600,
-orientation: 'West',
-user_id: user6.id,
-storey: 6,
-house_type: "flat"
-)
-balcony6.remote_photo_url = 'http://res.cloudinary.com/dun7rljns/image/upload/v1466423743/balcony9_ltxtwg.jpg'
-balcony6.save
+# ##########################   Balcony  SEED    ###############
+
+# balcony1 = Balcony.new(
+# name: "Jojo's balcony",
+# model: 'small',
+# address: '12 rue des tours, 59800, Lille',
+# city: 'Croix',
+# department: 59800,
+# length: 100,
+# width: 30,
+# orientation: 'south',
+# user_id: user1.id,
+# storey: 4,
+# house_type: "house"
+# )
+# balcony1.remote_photo_url = 'http://res.cloudinary.com/dun7rljns/image/upload/v1465992527/balcony22_bl1bva.jpg'
+# balcony1.save
+
+# balcony2 = Balcony.new(
+# name: "Rene's balcony",
+# model: 'small',
+# # 'small', 'medium', 'large'
+# address: '22 rue jonquoy, 75014, Paris',
+# city: 'Paris',
+# department: 75014,
+# length: 200,
+# width: 60,
+# orientation: 'North',
+# user_id: user2.id,
+# storey: 4,
+# house_type: "flat"
+# )
+# balcony2.remote_photo_url = 'http://res.cloudinary.com/dun7rljns/image/upload/v1465992526/balcony15_v1qywc.jpg'
+# balcony2.save
+
+# balcony3 = Balcony.new(
+# name: "Roger's balcony",
+# model: 'small',
+# # 'small', 'medium', 'large'
+# address: '9 rue Charles François Dupuis, 75003 Paris',
+# city: 'Paris',
+# department: 75003,
+# length: 400,
+# width: 600,
+# orientation: 'West',
+# user_id: user3.id,
+# storey: 6,
+# house_type: "flat"
+# )
+# balcony3.remote_photo_url = 'http://res.cloudinary.com/dun7rljns/image/upload/v1465992527/balcony24_tbummp.jpg'
+# balcony3.save
 
 
-balcony7 = Balcony.new(
-name: "John Smith's balcony",
-model: 'large',
-address: '26 rue des tanneurs, 35700, Rennes',
-city: 'Rennes',
-department: 35700,
-length: 100,
-width: 30,
-orientation: 'south',
-user_id: user7.id,
-storey: 4,
-house_type: "house"
-)
-balcony7.remote_photo_url = 'http://res.cloudinary.com/dun7rljns/image/upload/v1466426784/balcony14_xdcgij.jpg'
-balcony7.save
+# balcony4 = Balcony.new(
+# name: "Tintin's balcony",
+# model: 'medium',
+# address: '4 boulevard Léon Bureau, 44200, Nantes',
+# city: 'Nantes',
+# department: 44200,
+# length: 100,
+# width: 30,
+# orientation: 'south',
+# user_id: user4.id,
+# storey: 4,
+# house_type: "house"
+# )
+# balcony4.remote_photo_url = 'http://res.cloudinary.com/dun7rljns/image/upload/v1466423844/balcony3_pj0luf.jpg'
+# balcony4.save
 
-balcony8 = Balcony.new(
-name: "Mickael Oneil's balcony",
-model: 'large',
-# 'small', 'medium', 'large'
-address: '92 avenue About, 59240, Dunkerque',
-city: 'Dunkerque',
-department: 59240,
-length: 200,
-width: 60,
-orientation: 'North',
-user_id: user8.id,
-storey: 4,
-house_type: "flat"
-)
-balcony8.remote_photo_url = 'http://res.cloudinary.com/dun7rljns/image/upload/v1466427755/balcon24_yvcbsd.jpg'
-balcony8.save
 
-balcony9 = Balcony.new(
-name: "Arlette's balcony",
-model: 'large',
-# 'small', 'medium', 'large'
-address: '95 rue Garibaldi, 69006 Lyon',
-city: 'Lyon',
-department: 69006,
-length: 400,
-width: 600,
-orientation: 'East',
-user_id: user9.id,
-storey: 6,
-house_type: "flat"
-)
-balcony9.remote_photo_url = 'http://res.cloudinary.com/dun7rljns/image/upload/v1466427756/balcony2_acgh8v.jpg'
-balcony9.save
+# balcony5 = Balcony.new(
+# name: "Jack's balcony",
+# model: 'medium',
+# # 'small', 'medium', 'large'
+# address: '7 rue des paradoux, 31000, Toulouse',
+# city: 'Toulouse',
+# department: 31000,
+# length: 200,
+# width: 60,
+# orientation: 'North',
+# user_id: user5.id,
+# storey: 4,
+# house_type: "flat"
+# )
+# balcony5.remote_photo_url = 'http://res.cloudinary.com/dun7rljns/image/upload/v1466423825/balcony5_bum7jj.jpg'
+# balcony5.save
 
-balcony10 = Balcony.new(
-name: "Arlette's balcony",
-model: 'small',
-# 'small', 'medium', 'large'
-address: '4 rue Marcel Proust, 45000 Orléans',
-city: 'Orléans',
-department: 45000,
-length: 400,
-width: 600,
-orientation: 'East',
-user_id: user9.id,
-storey: 6,
-house_type: "flat"
-)
-balcony10.remote_photo_url = 'http://res.cloudinary.com/dun7rljns/image/upload/v1466611886/small_balcony3_ct9f7j.jpg'
-balcony10.save
+# balcony6 = Balcony.new(
+# name: "Billy's balcony",
+# model: 'medium',
+# # 'small', 'medium', 'large'
+# address: '27 rue du vieil hôpital, 67000, Strasbourg',
+# city: 'Strasbourg',
+# department: 67000,
+# length: 400,
+# width: 600,
+# orientation: 'West',
+# user_id: user6.id,
+# storey: 6,
+# house_type: "flat"
+# )
+# balcony6.remote_photo_url = 'http://res.cloudinary.com/dun7rljns/image/upload/v1466423743/balcony9_ltxtwg.jpg'
+# balcony6.save
 
-balcony11 = Balcony.new(
-name: "Arlette's balcony",
-model: 'small',
-# 'small', 'medium', 'large'
-address: '22 rue Buirette, 51100 Reims',
-city: 'Reims',
-department: 51100,
-length: 400,
-width: 600,
-orientation: 'East',
-user_id: user9.id,
-storey: 6,
-house_type: "flat"
-)
-balcony11.remote_photo_url = 'http://res.cloudinary.com/dun7rljns/image/upload/v1466611886/balcony_small2_hxahqg.jpg'
-balcony11.save
 
-balcony12 = Balcony.new(
-name: "Arlette's balcony",
-model: 'small',
-# 'small', 'medium', 'large'
-address: '120 rue Foch, 34000 Montpellier',
-city: 'Montpellier',
-department: 34000,
-length: 400,
-width: 600,
-orientation: 'East',
-user_id: user9.id,
-storey: 6,
-house_type: "flat"
-)
-balcony12.remote_photo_url = 'http://res.cloudinary.com/dun7rljns/image/upload/v1466611886/balcon_small1_vrt8vn.jpg'
-balcony12.save
+# balcony7 = Balcony.new(
+# name: "John Smith's balcony",
+# model: 'large',
+# address: '26 rue des tanneurs, 35700, Rennes',
+# city: 'Rennes',
+# department: 35700,
+# length: 100,
+# width: 30,
+# orientation: 'south',
+# user_id: user7.id,
+# storey: 4,
+# house_type: "house"
+# )
+# balcony7.remote_photo_url = 'http://res.cloudinary.com/dun7rljns/image/upload/v1466426784/balcony14_xdcgij.jpg'
+# balcony7.save
 
-balcony13 = Balcony.new(
-name: "Jack's balcony",
-model: 'medium',
-# 'small', 'medium', 'large'
-address: '13 rue Faventines, 26000, Valence',
-city: 'Valence',
-department: 26000,
-length: 200,
-width: 60,
-orientation: 'North',
-user_id: user5.id,
-storey: 4,
-house_type: "flat"
-)
-balcony13.remote_photo_url = 'http://res.cloudinary.com/dun7rljns/image/upload/v1466611879/balcony_medium2_f27acw.jpg'
-balcony13.save
+# balcony8 = Balcony.new(
+# name: "Mickael Oneil's balcony",
+# model: 'large',
+# # 'small', 'medium', 'large'
+# address: '92 avenue About, 59240, Dunkerque',
+# city: 'Dunkerque',
+# department: 59240,
+# length: 200,
+# width: 60,
+# orientation: 'North',
+# user_id: user8.id,
+# storey: 4,
+# house_type: "flat"
+# )
+# balcony8.remote_photo_url = 'http://res.cloudinary.com/dun7rljns/image/upload/v1466427755/balcon24_yvcbsd.jpg'
+# balcony8.save
 
-balcony14 = Balcony.new(
-name: "Jack's balcony",
-model: 'medium',
-# 'small', 'medium', 'large'
-address: '61 Rue du Porteau, 86000, Poitiers',
-city: 'Poitiers',
-department: 86000,
-length: 200,
-width: 60,
-orientation: 'North',
-user_id: user5.id,
-storey: 4,
-house_type: "flat"
-)
-balcony14.remote_photo_url = 'http://res.cloudinary.com/dun7rljns/image/upload/v1466611878/balcony_medium1_vnfszu.jpg'
-balcony14.save
+# balcony9 = Balcony.new(
+# name: "Arlette's balcony",
+# model: 'large',
+# # 'small', 'medium', 'large'
+# address: '95 rue Garibaldi, 69006 Lyon',
+# city: 'Lyon',
+# department: 69006,
+# length: 400,
+# width: 600,
+# orientation: 'East',
+# user_id: user9.id,
+# storey: 6,
+# house_type: "flat"
+# )
+# balcony9.remote_photo_url = 'http://res.cloudinary.com/dun7rljns/image/upload/v1466427756/balcony2_acgh8v.jpg'
+# balcony9.save
 
-balcony15 = Balcony.new(
-name: "Jack's balcony",
-model: 'medium',
-# 'small', 'medium', 'large'
-address: '54 Rue de Pessac, 33000, Bordeaux',
-city: 'Bordeaux',
-department: 33000,
-length: 200,
-width: 60,
-orientation: 'North',
-user_id: user5.id,
-storey: 4,
-house_type: "flat"
-)
-balcony15.remote_photo_url = 'http://res.cloudinary.com/dun7rljns/image/upload/v1466611879/balcony_medium3_bq7xbu.jpg'
-balcony15.save
+# balcony10 = Balcony.new(
+# name: "Arlette's balcony",
+# model: 'small',
+# # 'small', 'medium', 'large'
+# address: '4 rue Marcel Proust, 45000 Orléans',
+# city: 'Orléans',
+# department: 45000,
+# length: 400,
+# width: 600,
+# orientation: 'East',
+# user_id: user9.id,
+# storey: 6,
+# house_type: "flat"
+# )
+# balcony10.remote_photo_url = 'http://res.cloudinary.com/dun7rljns/image/upload/v1466611886/small_balcony3_ct9f7j.jpg'
+# balcony10.save
+
+# balcony11 = Balcony.new(
+# name: "Arlette's balcony",
+# model: 'small',
+# # 'small', 'medium', 'large'
+# address: '22 rue Buirette, 51100 Reims',
+# city: 'Reims',
+# department: 51100,
+# length: 400,
+# width: 600,
+# orientation: 'East',
+# user_id: user9.id,
+# storey: 6,
+# house_type: "flat"
+# )
+# balcony11.remote_photo_url = 'http://res.cloudinary.com/dun7rljns/image/upload/v1466611886/balcony_small2_hxahqg.jpg'
+# balcony11.save
+
+# balcony12 = Balcony.new(
+# name: "Arlette's balcony",
+# model: 'small',
+# # 'small', 'medium', 'large'
+# address: '120 rue Foch, 34000 Montpellier',
+# city: 'Montpellier',
+# department: 34000,
+# length: 400,
+# width: 600,
+# orientation: 'East',
+# user_id: user9.id,
+# storey: 6,
+# house_type: "flat"
+# )
+# balcony12.remote_photo_url = 'http://res.cloudinary.com/dun7rljns/image/upload/v1466611886/balcon_small1_vrt8vn.jpg'
+# balcony12.save
+
+# balcony13 = Balcony.new(
+# name: "Jack's balcony",
+# model: 'medium',
+# # 'small', 'medium', 'large'
+# address: '13 rue Faventines, 26000, Valence',
+# city: 'Valence',
+# department: 26000,
+# length: 200,
+# width: 60,
+# orientation: 'North',
+# user_id: user5.id,
+# storey: 4,
+# house_type: "flat"
+# )
+# balcony13.remote_photo_url = 'http://res.cloudinary.com/dun7rljns/image/upload/v1466611879/balcony_medium2_f27acw.jpg'
+# balcony13.save
+
+# balcony14 = Balcony.new(
+# name: "Jack's balcony",
+# model: 'medium',
+# # 'small', 'medium', 'large'
+# address: '61 Rue du Porteau, 86000, Poitiers',
+# city: 'Poitiers',
+# department: 86000,
+# length: 200,
+# width: 60,
+# orientation: 'North',
+# user_id: user5.id,
+# storey: 4,
+# house_type: "flat"
+# )
+# balcony14.remote_photo_url = 'http://res.cloudinary.com/dun7rljns/image/upload/v1466611878/balcony_medium1_vnfszu.jpg'
+# balcony14.save
+
+# balcony15 = Balcony.new(
+# name: "Jack's balcony",
+# model: 'medium',
+# # 'small', 'medium', 'large'
+# address: '54 Rue de Pessac, 33000, Bordeaux',
+# city: 'Bordeaux',
+# department: 33000,
+# length: 200,
+# width: 60,
+# orientation: 'North',
+# user_id: user5.id,
+# storey: 4,
+# house_type: "flat"
+# )
+# balcony15.remote_photo_url = 'http://res.cloudinary.com/dun7rljns/image/upload/v1466611879/balcony_medium3_bq7xbu.jpg'
+# balcony15.save
 
 ##########################   Balcony_picture  SEED    ###############
 
