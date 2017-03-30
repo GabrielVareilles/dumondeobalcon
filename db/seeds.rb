@@ -865,7 +865,14 @@ sub_category = 'Accessoire Cuisine'
 
 urls = []
 
-urls << "https://www.alicedelice.com/1124-preparer-decouper"
+urls << "https://www.alicedelice.com/planche-a-decouper-en-bois/guillotine-a-saucisson-1016643.html"
+urls << "https://www.alicedelice.com/presse-burger/kit-burger-presse-2-cercles-1013574.html"
+urls << "https://www.alicedelice.com/mandoline-de-cuisine/decoupe-legume-1016999.html"
+urls << "https://www.alicedelice.com/plat/panier-a-cuisson-1014150.html"
+urls << "https://www.alicedelice.com/planche-a-decouper-en-bois/guillotine-a-saucisson-le-plateau-1014717.html"
+urls << "https://www.alicedelice.com/accessoires-aperitif/kit-5-decoupes-toast-poussoir-1011912.html"
+urls << "https://www.alicedelice.com/tire-bouchon/decapsuleur-hipster-hiver-1017930.html"
+urls << "https://www.alicedelice.com/accessoires-fruits-de-mer/couteau-a-huitres-et-coquillages-1018301.html"
 
 category = 'De Cultiver'
 urls.each do |url|
