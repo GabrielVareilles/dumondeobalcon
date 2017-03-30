@@ -398,7 +398,7 @@ end
 
 url1 = 'https://www.leroymerlin.fr/v3/p/produits/chaise-de-jardin-en-polycarbonate-paris-lux-transparent-e122696'
 item1 = Item.new(Services::Scrapper.scrap(url1))
-item.category = "pot"
+item1.category = "pot"
 item1.save!
 
 
