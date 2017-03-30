@@ -42,7 +42,7 @@ module Services
 
         data[:price] = 80
         data[:name] = doc.search('.head-title-product h1').text.strip
-        data[:description] = " "
+        data[:description] = "Pas de description"
 
         data[:photo_url] = doc.search('.swiper-slide a').attribute('href').value
 
