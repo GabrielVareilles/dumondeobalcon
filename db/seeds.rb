@@ -408,7 +408,7 @@ urls << 'https://www.delamaison.fr/chaise-jardin-pliante-grise-p-192210.html#p=1
 urls << "https://www.leroymerlin.fr/v3/p/produits/lot-de-2-chaises-de-jardin-en-bois-porto-porto-e1400903432"
 urls.each do |url|
   if url.spit('.')[1] == 'leroymerlin'
-    item = Item.new(Services::Scrapper.scrap(url1))
+    item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
     item.save!
@@ -427,7 +427,7 @@ urls << "https://www.delamaison.fr/table-jardin-carree-pliante-acier-60x60cm-p-9
 urls << "https://www.delamaison.fr/table-balcon-pliante-rabattable-acier-hauteur-115cm-bistro-p-166924.html"
 urls.each do |url|
   if url.spit('.')[1] == 'leroymerlin'
-    item = Item.new(Services::Scrapper.scrap(url1))
+    item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
     item.save!
@@ -447,7 +447,7 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/table-basse-grosfillex-miami-c
 urls << "https://www.leroymerlin.fr/v3/p/produits/table-basse-grosfillex-miami-carree-anthracite-2-personnes-e1400020921#&xtmc=table_basse_jardin&xtcr=47"
 urls.each do |url|
   if url.spit('.')[1] == 'leroymerlin'
-    item = Item.new(Services::Scrapper.scrap(url1))
+    item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
     item.save!
@@ -462,7 +462,7 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/salon-bas-de-jardin-acacia-boi
 urls << "https://www.leroymerlin.fr/v3/p/produits/salon-bas-de-jardin-portovecchio-resine-tressee-gris-2-fauteuils-1-table-basse-e1401421319#&xtmc=table_basse_jardin&xtcr=5"
 urls.each do |url|
   if url.spit('.')[1] == 'leroymerlin'
-    item = Item.new(Services::Scrapper.scrap(url1))
+    item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
     item.save!
@@ -479,7 +479,7 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/coussin-d-assise-de-chaise-ou-
 urls << "https://www.leroymerlin.fr/v3/p/produits/coussin-d-assise-de-chaise-ou-de-fauteuil-muscade-bistro-e158334"
 urls.each do |url|
   if url.spit('.')[1] == 'leroymerlin'
-    item = Item.new(Services::Scrapper.scrap(url1))
+    item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
     item.save!
@@ -495,7 +495,7 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/pouf-de-sol-gris-lounge-e14007
 urls << "https://www.leroymerlin.fr/v3/p/produits/pouf-de-jardin-en-tissu-berlingot-blanc-e1400273381"
 urls.each do |url|
   if url.spit('.')[1] == 'leroymerlin'
-    item = Item.new(Services::Scrapper.scrap(url1))
+    item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
     item.save!
@@ -516,7 +516,7 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/chilienne-de-jardin-en-tissu-e
 urls << "https://www.leroymerlin.fr/v3/p/produits/toile-de-transat-amovible-en-tissu-toile-de-rechange-maxi-transat-seigle-e1500620042#&xtmc=transat&xtcr=48"
 urls.each do |url|
   if url.spit('.')[1] == 'leroymerlin'
-    item = Item.new(Services::Scrapper.scrap(url1))
+    item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
     item.save!
@@ -532,7 +532,7 @@ urls << "https://www.delamaison.fr/salon-pour-balcon-places-table-60x53m-chaises
 category = 'De Ranger'
 urls.each do |url|
   if url.spit('.')[1] == 'leroymerlin'
-    item = Item.new(Services::Scrapper.scrap(url1))
+    item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
     item.save!
@@ -549,7 +549,7 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/coffre-de-jardin-resine-eden-g
 urls << "https://www.delamaison.fr/table-jardin-120x70cm-cante-p-200252.html"
 urls.each do |url|
   if url.spit('.')[1] == 'leroymerlin'
-    item = Item.new(Services::Scrapper.scrap(url1))
+    item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
     item.save!
@@ -570,7 +570,7 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/etendoir-tour-blanc-bleu-azur-
 category = 'De Recevoir'
 urls.each do |url|
   if url.spit('.')[1] == 'leroymerlin'
-    item = Item.new(Services::Scrapper.scrap(url1))
+    item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
     item.save!
@@ -589,7 +589,7 @@ urls << "https://www.alicedelice.com/flute-a-champagne/set-6-flutes-a-champagne-
 urls << "https://www.alicedelice.com/assiettes/1-assiette-a-risotto-1010928.html"
 urls.each do |url|
   if url.spit('.')[1] == 'leroymerlin'
-    item = Item.new(Services::Scrapper.scrap(url1))
+    item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
     item.save!
@@ -604,7 +604,7 @@ urls << "https://www.alicedelice.com/assiettes/8-assiettes-pirate-1017016.html"
 urls << "https://www.alicedelice.com/assiettes/8-assiettes-princesse-1017017.html"
 urls.each do |url|
   if url.spit('.')[1] == 'leroymerlin'
-    item = Item.new(Services::Scrapper.scrap(url1))
+    item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
     item.save!
@@ -624,7 +624,7 @@ urls << "https://www.alicedelice.com/accessoires-cocktails/shaker-a-cocktail-ino
 category = 'De Cuisiner'
 urls.each do |url|
   if url.spit('.')[1] == 'leroymerlin'
-    item = Item.new(Services::Scrapper.scrap(url1))
+    item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
     item.save!
@@ -642,7 +642,7 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/barbecue-electrique-paname-gri
 urls << "https://www.delamaison.fr/barbecue-charbon-nomade-longueur-44cm-anywhere-p-205766.html"
 urls.each do |url|
   if url.spit('.')[1] == 'leroymerlin'
-    item = Item.new(Services::Scrapper.scrap(url1))
+    item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
     item.save!
@@ -657,7 +657,7 @@ urls << "https://www.alicedelice.com/plancha/plancha-prestige-600-1014866.html"
 urls << "https://www.alicedelice.com/plancha/chariot-pour-plancha-prestige-600-1014868.html"
 urls.each do |url|
   if url.spit('.')[1] == 'leroymerlin'
-    item = Item.new(Services::Scrapper.scrap(url1))
+    item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
     item.save!
@@ -673,7 +673,7 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/brosse-weber-e166863"
 urls << "https://www.leroymerlin.fr/v3/p/produits/brosse-bois-weber-e33510"
 urls.each do |url|
   if url.spit('.')[1] == 'leroymerlin'
-    item = Item.new(Services::Scrapper.scrap(url1))
+    item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
     item.save!
@@ -685,7 +685,7 @@ urls = []
 
 urls.each do |url|
   if url.spit('.')[1] == 'leroymerlin'
-    item = Item.new(Services::Scrapper.scrap(url1))
+    item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
     item.save!
@@ -700,7 +700,7 @@ urls << "https://www.alicedelice.com/1124-preparer-decouper"
 category = 'De Cultiver'
 urls.each do |url|
   if url.spit('.')[1] == 'leroymerlin'
-    item = Item.new(Services::Scrapper.scrap(url1))
+    item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
     item.save!
@@ -724,7 +724,7 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/pot-terre-cuite-deroma-diam-9-
 urls << "https://www.lightonline.fr/guirlande-et-objet-lumineux/3266/slide-il-vaso-pot-lumineux-exterieur-h75cm"
 urls.each do |url|
   if url.spit('.')[1] == 'leroymerlin'
-    item = Item.new(Services::Scrapper.scrap(url1))
+    item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
     item.save!
@@ -740,7 +740,7 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/radis-de-18-jours-vilmorin-10-
 urls << "https://www.leroymerlin.fr/v3/p/produits/tomate-coeur-de-boeuf-vilmorin-0-2-g-e149160"
 urls.each do |url|
   if url.spit('.')[1] == 'leroymerlin'
-    item = Item.new(Services::Scrapper.scrap(url1))
+    item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
     item.save!
@@ -756,7 +756,7 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/potager-sur-pieds-eda-plastiqu
 urls << "https://www.leroymerlin.fr/v3/p/produits/carre-potager-forest-avenue-noisetier-naturel-l-90-x-l-90-x-h-35-cm-e87682#&xtmc=carre_potager&xtcr=13"
 urls.each do |url|
   if url.spit('.')[1] == 'leroymerlin'
-    item = Item.new(Services::Scrapper.scrap(url1))
+    item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
     item.save!
@@ -769,7 +769,7 @@ urls = []
 urls << "https://www.leroymerlin.fr/v3/p/produits/terreau-balcons-et-terrasse-or-brun-20-l-e1400992545"
 urls.each do |url|
   if url.spit('.')[1] == 'leroymerlin'
-    item = Item.new(Services::Scrapper.scrap(url1))
+    item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
     item.save!
@@ -787,7 +787,7 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/plantoir-a-bulbes-acier-garden
 urls << "https://www.leroymerlin.fr/v3/p/produits/binette-acier-geolia-nature-e1400459347"
 urls.each do |url|
   if url.spit('.')[1] == 'leroymerlin'
-    item = Item.new(Services::Scrapper.scrap(url1))
+    item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
     item.save!
@@ -803,7 +803,7 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/tablier-cordeline-tradex-fushi
 urls << "https://www.leroymerlin.fr/v3/p/produits/tablier-cordeline-tradex-taupe-taille-unique-e1401571169"
 urls.each do |url|
   if url.spit('.')[1] == 'leroymerlin'
-    item = Item.new(Services::Scrapper.scrap(url1))
+    item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
     item.save!
@@ -816,7 +816,7 @@ urls = []
 urls << "https://www.leroymerlin.fr/v3/p/produits/composteur-monobloc-250-l-e136814#&xtmc=composteur&xtcr=7"
 urls.each do |url|
   if url.spit('.')[1] == 'leroymerlin'
-    item = Item.new(Services::Scrapper.scrap(url1))
+    item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
     item.save!
@@ -830,7 +830,7 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/un-potager-sur-mon-balcon-laro
 urls << "https://www.leroymerlin.fr/v3/p/produits/un-potager-dans-un-mini-jardin-sur-un-balcon-ou-un-appui-de-fenetre-marabout-e155323#&xtmc=balcon&xtcr=20"
 urls.each do |url|
   if url.spit('.')[1] == 'leroymerlin'
-    item = Item.new(Services::Scrapper.scrap(url1))
+    item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
     item.save!
@@ -845,7 +845,7 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/serre-de-balcon-nortene-l-31-x
 category = 'De Me Proteger'
 urls.each do |url|
   if url.spit('.')[1] == 'leroymerlin'
-    item = Item.new(Services::Scrapper.scrap(url1))
+    item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
     item.save!
@@ -862,7 +862,7 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/parasol-balcon-leo-vert-anis-r
 urls << "https://www.leroymerlin.fr/v3/p/produits/parasol-balcon-leo-ecru-rectangulaire-l-300-x-l-150-cm-e1400027450#&xtmc=balcon&xtcr=25"
 urls.each do |url|
   if url.spit('.')[1] == 'leroymerlin'
-    item = Item.new(Services::Scrapper.scrap(url1))
+    item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
     item.save!
@@ -878,7 +878,7 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/panneau-bois-ajoure-l-78-cm-x-
 urls << "https://www.leroymerlin.fr/v3/p/produits/treillage-fixe-droite-n10703-l-60-x-h-120-x-p-0-6-cm-e1401630379"
 urls.each do |url|
   if url.spit('.')[1] == 'leroymerlin'
-    item = Item.new(Services::Scrapper.scrap(url1))
+    item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
     item.save!
@@ -893,7 +893,7 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/store-de-balcon-manuel-balcony
 category = "De m'éclairer PE"
 urls.each do |url|
   if url.spit('.')[1] == 'leroymerlin'
-    item = Item.new(Services::Scrapper.scrap(url1))
+    item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
     item.save!
@@ -912,7 +912,7 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/applique-exterieure-malambo-le
 urls << "https://www.leroymerlin.fr/v3/p/produits/applique-descendante-exterieure-neiva-gu10-35-w-blanc-inspire-e1400887625"
 urls.each do |url|
   if url.spit('.')[1] == 'leroymerlin'
-    item = Item.new(Services::Scrapper.scrap(url1))
+    item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
     item.save!
@@ -934,7 +934,7 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/boule-decorative-exterieure-bu
 category = 'De Refaire mon sol'
 urls.each do |url|
   if url.spit('.')[1] == 'leroymerlin'
-    item = Item.new(Services::Scrapper.scrap(url1))
+    item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
     item.save!
@@ -949,7 +949,7 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/gazon-artificiel-oraverde-au-r
 urls << "https://www.leroymerlin.fr/v3/p/produits/dalle-clipsable-gazon-synthetique-vert-l-30-x-l-30-cm-x-ep-30-mm-e165680"
 urls.each do |url|
   if url.spit('.')[1] == 'leroymerlin'
-    item = Item.new(Services::Scrapper.scrap(url1))
+    item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
     item.save!
@@ -965,7 +965,7 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/lot-de-4-dalles-clipsables-boi
 urls << "https://www.leroymerlin.fr/v3/p/produits/dalle-bois-hevea-l-100-x-l-100-cm-x-ep-40-mm-e1500280938"
 urls.each do |url|
   if url.spit('.')[1] == 'leroymerlin'
-    item = Item.new(Services::Scrapper.scrap(url1))
+    item = Item.new(Services::Scrapper.scrap(url))
     item.category = category
     item.sub_category = sub_category
     item.save!
@@ -976,7 +976,14 @@ sub_category = 'Terrasse teck'
 urls = []
 
 urls << "https://www.leroymerlin.fr/v3/p/produits/planche-composite-grafik-2-noir-anthracite-l-400-x-l-18-6-cm-x-ep-26-mm-e1401291591"
-
+urls.each do |url|
+  if url.spit('.')[1] == 'leroymerlin'
+    item = Item.new(Services::Scrapper.scrap(url))
+    item.category = category
+    item.sub_category = sub_category
+    item.save!
+  end
+end
 
 # category:  ,
 # # deco pot plant
