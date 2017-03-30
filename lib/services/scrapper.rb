@@ -11,7 +11,7 @@ module Services
         data = {}
         data[:price] = doc.search('.price').first.text.split(' € ')[0].to_i * 1000
         data[:name] = doc.search('.title-page').first.text
-        data[:description] = doc.search('.desc').text
+        doc.search('.desc').text != "" ? data[:description] = doc.search('.desc').text : data[:description] = "Pas de description"
         tech_hash = doc.search(name="th").map { |e| e.text }.zip(doc.search(name="td").map { |e| e.text }).to_h
         # data[:volume] =
         # data[:length] =
