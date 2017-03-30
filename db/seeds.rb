@@ -457,7 +457,7 @@ sub_category = 'Table basse'
 
 urls = []
 
-urls << "https://www.delamaison.fr/table-basse-empilable-alize-d48cm-p-22008.html#p=22003"
+# urls << "https://www.delamaison.fr/table-basse-empilable-alize-d48cm-p-22008.html#p=22003"
 urls << "https://www.tikamoon.com/art-table-basse-ronde-en-marbre-et-metal-2001.html"
 urls << "https://www.leroymerlin.fr/v3/p/produits/table-de-jardin-basse-mabrista-ronde-ecru-2-personnes-e1500514721#&xtmc=table_basse_jardin&xtcr=2"
 urls << "https://www.leroymerlin.fr/v3/p/produits/table-de-jardin-basse-kent-carree-naturel-2-personnes-e1500488104#&xtmc=table_basse_jardin&xtcr=7"
