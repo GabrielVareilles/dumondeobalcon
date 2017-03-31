@@ -227,7 +227,7 @@
         <div class="col-sm-3 col-md-3 col-lg-3">
           <div class="shop-item">
             <div class="shop-item-photo">
-              <%= cl_image_tag product.photo, height: 400, width: 720, crop: :fill %>
+              <%= image_tag product.attributes['photo_url'], height: 400, width: 720, crop: :fill %>
               <div class="shop-item-tools">
                 <div>
                   <div>
