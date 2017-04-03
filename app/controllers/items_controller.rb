@@ -31,7 +31,7 @@ class ItemsController < ApplicationController
       'pots',
       'graines',
       'potager',
-      'terrreau',
+      'terreau',
       'accessoire jardinage',
       'équipements (tablier gant etc..)',
       'composte',

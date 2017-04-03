@@ -90,7 +90,7 @@
 
             <div class="row">
               <div class="col-sm-6">
-                <a class="btn btn-block btn-round btn-base">Add to cart</a>
+                <%= link_to "Add to cart", add_item_carts_path(item: @item.id),html_options = { method: :post, class: "btn btn-block btn-round btn-base" }%>
               </div>
             </div><!-- .row -->
           </form>

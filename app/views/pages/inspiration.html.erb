@@ -13,7 +13,7 @@
             <div class="container">
               <div class="row">
                 <div class="col-sm-12 text-center">
-                  <h1 class="montserrat text-uppercase text-super-xl m-b-40">Get inspired</h1>
+                  <h1 class="montserrat text-uppercase text-super-xl m-b-40">Soyez inspiré</h1>
                 </div>
               </div>
             </div>
@@ -31,8 +31,8 @@
       <div class="row">
         <div class="col-sm-6 col-sm-offset-3">
           <div class="module-header text-center">
-            <h2 class="montserrat text-uppercase">By our member</h2>
-            <p class="lead divider-line">Have a look on our member's pimped balconies</p>
+            <h2 class="montserrat text-uppercase">Par nos membre</h2>
+            <p class="lead divider-line">Regardez les balcons de nos membres</p>
            </div>
         </div>
       </div>
@@ -62,77 +62,18 @@
  </section>
  <!-- END IMAGE CAROUSEL -->
 
- <!-- BY OUR PRODUCT-->
-   <section class="bg-white-dark p-t-80 p-b-0">
-     <div class="container">
-       <div class="row">
-         <div class="col-sm-6 col-sm-offset-3">
-           <div class="module-header text-center">
-             <h2 class="montserrat text-uppercase">By our product</h2>
-             <p class="lead divider-line"> Happy hunting! </p>
-            </div>
-         </div>
-       </div>
-     </div>
-   </section>
- <!-- BY OUR PRODUCT -->
-
- <!-- PORTFOLIO -->
-  <section class="module-xs">
-  	<div class="container">
-
-  	<!-- PORTFOLIO FILTERS -->
-  	<div class="row">
-      <div class="col-sm-12">
-        <ul id="filters" class="filters p-t-20 bg-white-dark">
-          <li><a href="#" class="current" data-filter="*">All</a></li>
-          <li><a href="#" data-filter=".pot">Pot</a></li>
-          <li><a href="#" data-filter=".plant">Plant</a></li>
-          <li><a href="#" data-filter=".deco">Deco</a></li>
-        </ul>
-      </div>
-  	</div>
-  	<!-- END PORTFOLIO FILTERS -->
-
-  	<div class="works-grid-wrapper">
-  		<!-- WORKS GRID -->
-  		<div id="works-grid" class="works-grid works-grid-masonry works-grid-gutter works-grid-4">
-        <% Item.all.first(16).each do |product| %>
-  			<!-- PORTFOLIO ITEM -->
-    			<article class="work-item brand p-t-20 p-b-20 <%= product.category.downcase %>">
-    				<div class="work-wrapper">
-    					<%= cl_image_tag product.photo %>
-    					<div class="work-overlay">
-    						<div class="work-caption">
-                  <div class="work-title" style="text-align:center;">
-                  </div>
-    						</div>
-    					</div>
-              <%= link_to "", item_path(product.id), class: "work-link" %>
-    				</div>
-    			</article>
-  			<!-- END PORTFOLIO ITEM -->
-        <% end %>
-      </div>
-  		<!-- END WORKS GRID -->
-    </div>
-    </div>
-  </section>
-  <!-- END PORTFOLIO -->
-
-  <!-- BY OUR PRODUCT-->
-    <section class="bg-white-dark p-t-80 p-b-0">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6 col-sm-offset-3">
-            <div class="module-header text-center">
-              <h2 class="montserrat text-uppercase">By social networks</h2>
-              <p class="lead divider-line"> Plenty of friends to make! </p>
-             </div>
-          </div>
+  <section class="bg-white-dark p-t-80 p-b-0">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+          <div class="module-header text-center">
+            <h2 class="montserrat text-uppercase">Par nos réseaux sociaux</h2>
+            <p class="lead divider-line"> Rejoignez les fans de balcons  </p>
+           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
   <!-- BY OUR PRODUCT -->
 
 
