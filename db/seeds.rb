@@ -1208,7 +1208,7 @@ urls.each do |url|
   end
 end
 
-category = "De m'éclairer PE"
+category = "De m'éclairer"
 sub_category = 'Spot'
 
 urls = []

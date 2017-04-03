@@ -46,7 +46,7 @@ class ItemsController < ApplicationController
       'Store Occultant']
       @items = Item.where(category: 'De Me Proteger')
 
-    elsif params['category'] == "De m'éclairer PE"
+    elsif params['category'] == "De m'éclairer"
       @sub_categories = [
         'Spot',
         'lumiere design blanche sur batterie']
