@@ -51,14 +51,14 @@
 
     </div>
     <div class="col-sm-4">
-        <p><b class = "margin">Name:</b><%= current_user.first_name %>'s balcony</p><hr>
-        <p><b class = "margin">City:</b><%= @balcony.city %></p><hr>
+        <p><b class = "margin">Balcon:</b><%= current_user.first_name %>'s balcony</p><hr>
+        <p><b class = "margin">Ville:</b><%= @balcony.city %></p><hr>
         <% Department.all.each do |department| %>
           <% if department.number == @balcony.department.to_s[0..1].to_i %>
             <h3 class="montserrat text-uppercase p-t-40 p-b-20 text-center">Your local weather</h3>
-            <p><i class="fa fa-bullseye" aria-hidden="true" style="font-size:25px;color:black;"></i>&nbsp;&nbsp;&nbsp;<b>Temperature range: </b> <%= department.temperature_min %> to <%= department.temperature_max %>°C </p><hr>
-            <p><i class="fa fa-tint" aria-hidden="true" style="font-size:25px;color:#87CEEB;"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Annual Pluviometry: </b><%= department.pluviometry %> (mm) </p><hr>
-            <p><i class="fa fa-sun-o" aria-hidden="true" style="font-size:25px;color:#DAA520;"></i>&nbsp;&nbsp;&nbsp;<b>Sunshine Amount: </b><%= department.sunshine_amount %> (hours) </p><hr>
+            <p><i class="fa fa-bullseye" aria-hidden="true" style="font-size:25px;color:black;"></i>&nbsp;&nbsp;&nbsp;<b>Temperatures moyennes: </b> <%= department.temperature_min %> to <%= department.temperature_max %>°C </p><hr>
+            <p><i class="fa fa-tint" aria-hidden="true" style="font-size:25px;color:#87CEEB;"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Pluviometrie annuelle: </b><%= department.pluviometry %> (mm) </p><hr>
+            <p><i class="fa fa-sun-o" aria-hidden="true" style="font-size:25px;color:#DAA520;"></i>&nbsp;&nbsp;&nbsp;<b>Ensoleilement: </b><%= department.sunshine_amount %> (hours) </p><hr>
           <% end %>
         <% end %>
     </div>

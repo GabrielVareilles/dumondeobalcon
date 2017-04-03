@@ -74,21 +74,39 @@
   <!-- END HERO -->
 
   <!-- WRAPPER -->
-<div class="wrapper">
+<div class="wrapper" id="anchor1">
 
-  <section class=" m-t-40 bg-white-dark">
+  <section class="m-t-40 bg-white-dark">
     <div class="container">
+      <div class="col-sm-12 text-center">
+        <h3 class="montserrat text-uppercase m-b-10">J'ai besoin:</h3>
+      </div>
       <div class="row">
-        <div class="col-sm-12 text-center">
-          <h3 class="montserrat text-uppercase m-t-40">J'ai besoin de profiter</h3>
-          <!-- PORTFOLIO FILTERS -->
+        <div class="col-sm-12 text-center">>
+          <div class="row">
+            <div class="col-sm-12">
+              <ul id="tabs" class="filters p-t-20 bg-white-dark">
+                <li><%= link_to "De Profiter", items_path(category: 'De Profiter', anchor: 'anchor1') %></li>
+                <li><%= link_to "De Cuisiner", items_path(category: 'De Cuisiner', anchor: 'anchor1') %></li>
+                <li><%= link_to "De Cultiver", items_path(category: 'De Cultiver', anchor: 'anchor1') %></li>
+                <li><%= link_to "De Me Proteger", items_path(category: 'De Me Proteger', anchor: 'anchor1') %></li>
+                <li><%= link_to "De m'éclairer", items_path(category: "De m'éclairer PE", anchor: 'anchor1') %></li>
+                <li><%= link_to "De Refaire mon sol", items_path(category: 'De Refaire mon sol', anchor: 'anchor1') %></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12 text-center">>
     			<div class="row">
     				<div class="col-sm-12">
     					<ul id="filters" class="filters p-t-20 bg-white-dark">
-    						<li><a href="#" class="current" data-filter="*">All</a></li>
-                <li><a href="#" data-filter=".pot">Pot</a></li>
-    						<li><a href="#" data-filter=".plant">Plant</a></li>
-    						<li><a href="#" data-filter=".deco">Deco</a></li>
+    						<li><a href="#" class="current" data-filter="*">Tout</a></li>
+                <% @sub_categories.each do |sc|%>
+                  <li><a href="#" data-filter=<%=".#{sc.gsub('&', '+').gsub('é', 'e').gsub("'", '-').gsub(' ', '-').downcase}"%>> <%=sc.capitalize%> </a></li>
+                <% end %>
     					</ul>
     				</div>
     			</div>
@@ -108,8 +126,8 @@
 				<div id="works-grid" class="works-grid works-grid-4">
 
           <!-- PORTFOLIO ITEM -->
-          <% Item.all.each do |item| %>
-  					<article class="work-item <%= item.sub_category.downcase %>" style="padding: 20px 20px 40px 20px;">
+          <% @items.each do |item| %>
+  					<article class="work-item <%= item.sub_category.gsub('&', '+').gsub('é', 'e').gsub("'", '-').gsub(' ', '-').downcase %>" style="padding: 20px 20px 40px 20px;">
   						<div class="work-wrapper">
                 <%= image_tag item.attributes['photo_url']%>
   							<div class="work-overlay">

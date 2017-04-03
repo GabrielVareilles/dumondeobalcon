@@ -16,7 +16,7 @@ end
 
 # We truncate the records so to regenerate the seed.
 # Each time we seed all the items are lost and recreated.
-[Item, Plant].map(&:truncate!)
+[Item].map(&:truncate!)
 
 ##########################Department Seed###############
 
@@ -124,7 +124,7 @@ end
 # )
 # user9.save!
 
-# ##########################   Balcony  SEED    ###############
+# # ##########################   Balcony  SEED    ###############
 
 # balcony1 = Balcony.new(
 # name: "Jojo's balcony",
@@ -599,7 +599,6 @@ urls = []
 urls << "https://www.leroymerlin.fr/v3/p/produits/salon-de-jardin-acacia-bois-marron-1-table-et-2-chaises-e1401421472"
 urls << "https://www.delamaison.fr/salon-pour-balcon-places-table-60x53m-chaises-p-136672.html#p=192221"
 
-category = 'De Ranger'
 urls.each do |url|
   if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
@@ -618,6 +617,7 @@ urls.each do |url|
     item.save!
   end
 end
+category = 'De Ranger'
 sub_category = 'Coffre'
 
 urls = []
@@ -657,7 +657,6 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/etendoir-tour-blanc-bleu-azur-
 "http://www.autourdulinge.fr/?fond=produit&ref=130081&id_rubrique=79"
 
 
-category = 'De Recevoir'
 urls.each do |url|
   if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
@@ -676,6 +675,8 @@ urls.each do |url|
     item.save!
   end
 end
+
+category = 'De Recevoir'
 sub_category = 'Verres'
 
 urls = []
@@ -740,8 +741,6 @@ urls << "https://www.alicedelice.com/coffret-cocktail/coffret-mojito-addict-3-me
 urls << "https://www.alicedelice.com/assiette-ardoise/coffret-6-assiettes-ardoises-21-x-13-1010984.html"
 urls << "https://www.alicedelice.com/accessoires-cocktails/shaker-a-cocktail-inox-1012269.html"
 
-
-category = 'De Cuisiner'
 urls.each do |url|
   if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
@@ -760,6 +759,8 @@ urls.each do |url|
     item.save!
   end
 end
+
+category = 'De Cuisiner'
 sub_category = 'barbecue'
 
 urls = []
@@ -874,7 +875,6 @@ urls << "https://www.alicedelice.com/accessoires-aperitif/kit-5-decoupes-toast-p
 urls << "https://www.alicedelice.com/tire-bouchon/decapsuleur-hipster-hiver-1017930.html"
 urls << "https://www.alicedelice.com/accessoires-fruits-de-mer/couteau-a-huitres-et-coquillages-1018301.html"
 
-category = 'De Cultiver'
 urls.each do |url|
   if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
@@ -893,6 +893,8 @@ urls.each do |url|
     item.save!
   end
 end
+
+category = 'De Cultiver'
 sub_category = 'pots'
 
 urls = []
@@ -1109,7 +1111,6 @@ urls = []
 
 urls << "https://www.leroymerlin.fr/v3/p/produits/serre-de-balcon-nortene-l-31-x-p-19-x-h-105-cm-e38966#&xtmc=balcon&xtcr=29"
 
-category = 'De Me Proteger'
 urls.each do |url|
   if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
@@ -1128,6 +1129,8 @@ urls.each do |url|
     item.save!
   end
 end
+
+category = 'De Me Proteger'
 sub_category = 'Parasol'
 
 urls = []
@@ -1186,8 +1189,6 @@ sub_category = 'Store Occultant'
 urls = []
 
 urls << "https://www.leroymerlin.fr/v3/p/produits/store-de-balcon-manuel-balcony-artens-semi-coffre-l-0-9-m-x-avancee-3-m-e56965#&xtmc=balcon&xtcr=7"
-
-category = "De m'éclairer PE"
 urls.each do |url|
   if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
@@ -1206,6 +1207,8 @@ urls.each do |url|
     item.save!
   end
 end
+
+category = "De m'éclairer PE"
 sub_category = 'Spot'
 
 urls = []
@@ -1248,7 +1251,6 @@ urls << "https://www.leroymerlin.fr/v3/p/produits/lampadaire-exterieur-lola-165-
 urls << "https://www.leroymerlin.fr/v3/p/produits/lampe-de-table-exterieure-lola-45-cm-e27-25-w-880-lm-blanc-newgarden-e1400699131"
 urls << "https://www.leroymerlin.fr/v3/p/produits/boule-decorative-exterieure-buly-40-cm-e27-25-w-880-lm-blanc-newgarden-e1400699141"
 
-category = 'De Refaire mon sol'
 urls.each do |url|
   if url.split('.')[1] == 'leroymerlin'
     item = Item.new(Services::Scrapper.scrap(url))
@@ -1267,6 +1269,8 @@ urls.each do |url|
     item.save!
   end
 end
+
+category = 'De Refaire mon sol'
 sub_category = 'Moquette herbe'
 
 urls = []
