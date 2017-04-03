@@ -5346,7 +5346,7 @@ body.off-canvas-cart-open:after {
 }
 
 address.map-background {
-    background: url("../images/map.png") no-repeat left;
+/*    background: url("../images/map.png") no-repeat left;*/
 }
 
 .links-list {
