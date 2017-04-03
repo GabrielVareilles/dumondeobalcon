@@ -5,6 +5,7 @@ class BalconiesController < ApplicationController
 
   def index
     @balconies = policy_scope(Balcony)
+
   end
 
   def show_public
@@ -34,6 +35,63 @@ class BalconiesController < ApplicationController
   def complete
     @balcony = current_user.balconies.last
     authorize @balcony
+    if params['category'] == 'De Profiter'
+      @sub_categories = [
+        'Chaise',
+        'Table',
+        'table basse',
+        'fauteuil & canapé',
+        'Coussin',
+        'fatboy',
+        'chaise longue',
+        'Table + chaise']
+      @items = Item.where(category: 'De Profiter')
+
+    elsif params['category'] == 'De Ranger'
+      @sub_categories = ['coffre', 'seche linge exterieur']
+      @items = Item.where(category: 'De Ranger')
+    elsif params['category'] == 'De Recevoir'
+     @sub_categories = ['Verres', 'Assiettes', 'Apéritif']
+
+    elsif params['category'] == 'De Cuisiner'
+      @sub_categories = ['barbecue', 'Plancha', 'Accessoire barbecue', 'Pierrade', 'Accessoire Cuisine']
+      @items = Item.where(category: 'De Cuisiner')
+    elsif params['category'] == 'De Cultiver'
+      @sub_categories = [
+      'pots',
+      'graines',
+      'potager',
+      'terrreau',
+      'accessoire jardinage',
+      'équipements (tablier gant etc..)',
+      'composte',
+      'lecture',
+      'serre']
+      @items = Item.where(category: 'De Cultiver')
+
+    elsif params['category'] == 'De Me Proteger'
+      @sub_categories = [
+      'Parasol',
+      'panneau occultant',
+      'Store Occultant']
+      @items = Item.where(category: 'De Me Proteger')
+
+    elsif params['category'] == "De m'éclairer"
+      @sub_categories = [
+        'Spot',
+        'lumiere design blanche sur batterie']
+      @items = Item.where(category: "De m'éclairer")
+
+    elsif params['category'] == 'De Refaire mon sol'
+      @sub_categories = [
+        'moquette herbe',
+        'caillebotis',
+        'terrasse teck']
+      @items = Item.where(category: 'De Refaire mon sol')
+    else
+      @items = Item.all
+      @sub_categories = []
+    end
   end
 
   def edit
@@ -58,7 +116,7 @@ class BalconiesController < ApplicationController
     @balcony.add_item(@item)
 
     if @balcony.save
-      render json: @balcony
+      redirect_to :back
       flash[:notice] = "Item added to your balcony"
     else
       redirect_to complete_path

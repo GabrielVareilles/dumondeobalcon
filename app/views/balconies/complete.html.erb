@@ -21,7 +21,7 @@
   <div class="container p-b-20">
     <div class="row">
       <div class="col-sm-12 text-center">
-        <h3 class="montserrat text-uppercase m-b-10">Your info</h3>
+        <h3 class="montserrat text-uppercase m-b-10">Vos Informations:</h3>
       </div>
     </div>
   </div>
@@ -51,11 +51,11 @@
 
     </div>
     <div class="col-sm-4">
-        <p><b class = "margin">Balcon:</b><%= current_user.first_name %>'s balcony</p><hr>
+        <p><b class = "margin">Balcon:</b>Le balcon de<%=" " + current_user.first_name %></p><hr>
         <p><b class = "margin">Ville:</b><%= @balcony.city %></p><hr>
         <% Department.all.each do |department| %>
           <% if department.number == @balcony.department.to_s[0..1].to_i %>
-            <h3 class="montserrat text-uppercase p-t-40 p-b-20 text-center">Your local weather</h3>
+            <h3 class="montserrat text-uppercase p-t-40 p-b-20 text-center">Votre météo</h3>
             <p><i class="fa fa-bullseye" aria-hidden="true" style="font-size:25px;color:black;"></i>&nbsp;&nbsp;&nbsp;<b>Temperatures moyennes: </b> <%= department.temperature_min %> to <%= department.temperature_max %>°C </p><hr>
             <p><i class="fa fa-tint" aria-hidden="true" style="font-size:25px;color:#87CEEB;"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Pluviometrie annuelle: </b><%= department.pluviometry %> (mm) </p><hr>
             <p><i class="fa fa-sun-o" aria-hidden="true" style="font-size:25px;color:#DAA520;"></i>&nbsp;&nbsp;&nbsp;<b>Ensoleilement: </b><%= department.sunshine_amount %> (hours) </p><hr>
@@ -77,267 +77,37 @@
 </section>
 <!-- END YOUR INFO -->
 
-
-
-<!-- LE COEUR DU REACTEUR  -->
-<section class="p-t-40 p-b-20 p-b-0">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-8 col-sm-offset-2 text-center">
-        <h1 class="p-t-40">1. Assemble your custom pot </h1>
-        <p class="lead m-b-40">  Items are fitted for your balcony</p>
-      </div>
-    </div><!-- .row -->
-  </div>
-</section>
-
-<!-- TEXT TABS CENTER -->
-<section class="divider-bottom" style="padding-bottom: 40px;">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-
-        <!-- TABS -->
-        <div class="text-center">
-          <ul class="nav-text-tabs">
-            <li class="active"><a href="#tabs-3-tab-1" data-toggle="tab">POT</a></li>
-          </ul>
-
-          <div class="tab-content">
-            <!-- START TAB 1-->
-            <div id="tabs-3-tab-1" class="tab-pane active">
-              <p class ="m-b-0 m-t-0">Select the pot that fits the most your taste among this selection.</p><br>
-              <!-- START CARROUSSEL-->
-              <div class="box-carousel" data-carousel-options='{"items":"5", "navigation": true}'>
-                <% Item.all.where(category: "Pot").each do |pot| %>
-                  <div class="item">
-                    <%= cl_image_tag pot.photo, height: 250, width: 250, crop: :fill %>
-                    <p class="m-t-10"><%= pot.name %></p>
-                    <p class="m-t-10">
-                    <%= link_to duplicate_item_path(pot, name: current_user.first_name), method: :post, remote: true do %>
-                      <h3><i class="fa fa-plus-circle fa-lg refresh" aria-hidden="true"></i></h3>
-                    <% end %>
-                    </p>
-                  </div>
-                <% end %>
-              </div>
-              <!-- END CAROUSEL-->
-            </div>
-            <!-- END TAB 1-->
-          </div>
-        </div>
-        <!-- END TABS -->
-      </div>
-
-      <!-- Array ICON -->
-      <div class="col-sm-12">
-        <div class="text-center">
-          <h1><i class="fa fa-arrow-circle-down" aria-hidden="true" style="color: #27CBC0; height: 100px; width:100px;"></i></h1>
-        </div>
-      </div>
-
-
-    </div><!-- .row -->
-  </div>
-</section>
-<!-- END TEXT TABS CENTER -->
-<!-- END LE COEUR DU REACTEUR -->
-
-<!-- #############################################################YOUR CUSTOM POT############################################################## -->
-<section class="p-t-30 p-b-20">
-  <% c_item = Item.where(category: 'Custom').where("name LIKE '%#{current_user.first_name}%'").last %>
-  <% unless c_item.nil? %>
-
-    <div class="container" style ="background-color: #27CBC0; opacity: 0.8; width:90%; border-radius: 20px; padding: 20px 40px 20px 40px" >
-      <div class="row m-b-20">
-
-        <!-- PRICE -->
-        <div class="col-sm-1 text-center">
-          <h3 style="color:white"><%= 'Total: ' + c_item.price.to_s + ' €' %></h3>
-        </div>
-
-        <!-- TITLE -->
-        <div class="col-sm-4 col-sm-offset-3 text-center">
-          <h1 style="color:white"> Your Custom pot </h1>
-          <div class="shop-item-title">
-            <% if c_item.slot - c_item.plants.size != 0 %>
-              <h5 style="color:white"><%= 'You can add ' + (c_item.slot - c_item.plants.size).to_s + ' plants to your pot' %></h5>
-            <% else %>
-              <h5 style="color:white"><%= 'Your pot is filled, save it to your balcony :-)' %></h5>
-            <% end %>
-          </div>
-        </div>
-
-        <!-- EXIT -->
-        <div class="col-sm-1 col-sm-offset-3 text-center">
-          <h5><%= link_to "X", item_path(c_item), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-sm btn-circle btn-outline btn-gray" %></h5>
-        </div>
-
-      </div><!-- .row -->
-
-      <section class="divider-bottom", style= "padding-bottom: 0px;">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12">
-              <div class="text-center">
-                <ul id= "custom-nav-tabs" class="nav-text-tabs" style ="color: white">
-                  <li class="active" style= "color: #E3E4E8"><a href="#tabs-3-tab-0" data-toggle="tab">All</a></li>
-                  <li><a href="#tabs-3-tab-1" data-toggle="tab">Herbs</a></li>
-                  <li><a href="#tabs-3-tab-2" data-toggle="tab">Fruit</a></li>
-                  <li><a href="#tabs-3-tab-3" data-toggle="tab">Flower</a></li>
-                </ul>
-                <div class="tab-content">
-                  <!-- START TAB 0-->
-                  <div id="tabs-3-tab-0" class="tab-pane active">
-                    <!-- START CARROUSSEL-->
-                    <div class="box-carousel" data-carousel-options='{"items":"6", "navigation": true}' style="background-color:white; border-radius: 20px; padding: 0px 30px 0px 30px; padding-top: 20px;">
-                        <% Plant.all.each do |plant| %>
-                          <div class="item">
-                            <h5 class="p-t-5"><%= plant.name %></h5>
-                            <%= cl_image_tag plant.photo, height: 200, width: 250, crop: :fill %>
-                              <h3 class="m-t-10">
-                                <%= link_to add_plant_item_path(c_item, plant: plant.id), method: :post, remote: true do %>
-                                  <i class="fa fa-plus-circle fa-lg refresh" aria-hidden="true"></i></h3>
-                                <% end %>
-                              </h3>
-                          </div>
-                        <% end %>
-                    </div>
-                    <!-- END CAROUSEL-->
-                  </div>
-                  <!-- START TAB 1-->
-                  <div id="tabs-3-tab-1" class="tab-pane">
-                    <!-- START CARROUSSEL-->
-                    <div class="box-carousel" data-carousel-options='{"items":"6", "navigation": true}' style="background-color:white; border-radius: 20px; padding: 0px 30px 0px 30px; padding-top: 20px;">
-                        <% Plant.where(category: "herb").each do |plant| %>
-                          <div class="item">
-                            <h5 class="p-t-5"><%= plant.name %></h5>
-                            <%= cl_image_tag plant.photo, height: 200, width: 250, crop: :fill %>
-                              <h3 class="m-t-10">
-                                <%= link_to add_plant_item_path(c_item, plant: plant.id), method: :post, remote: true do %>
-                                  <i class="fa fa-plus-circle fa-lg refresh" aria-hidden="true"></i></h3>
-                                <% end %>
-                              </h3>
-                          </div>
-                        <% end %>
-                    </div>
-                    <!-- END CAROUSEL-->
-                  </div>
-                  <!-- START TAB 2-->
-                  <div id="tabs-3-tab-2" class="tab-pane">
-                    <!-- START CARROUSSEL-->
-                    <div class="box-carousel" data-carousel-options='{"items":"6", "navigation": true}' style="background-color:white; border-radius: 20px; margin-right:10px; margin-left:10px; padding-top: 20px;">
-                      <% Plant.where(category: "fruit").all.each do |plant| %>
-                        <div class="item">
-                          <h5 class="p-t-5"><%= plant.name %></h5>
-                          <%= cl_image_tag plant.photo, height: 200, width: 250, crop: :fill %>
-                            <h3 class="m-t-10">
-                              <%= link_to add_plant_item_path(c_item, plant: plant.id), method: :post, remote: true do %>
-                                <i class="fa fa-plus-circle fa-lg refresh" aria-hidden="true"></i></h3>
-                              <% end %>
-                            </h3>
-                        </div>
-                      <% end %>
-                    </div>
-                    <!-- END CAROUSEL-->
-                  </div>
-                  <!-- START TAB 3-->
-                  <div id="tabs-3-tab-3" class="tab-pane">
-                    <!-- START CARROUSSEL-->
-                    <div class="box-carousel" data-carousel-options='{"items":"6", "navigation": true}' style="background-color:white; border-radius: 20px; margin-right:10px; margin-left:10px; padding-top: 20px;">
-
-                        <% Plant.where(category: "flower").each do |plant| %>
-                        <div class="item">
-                          <h5 class="p-t-5"><%= plant.name %></h5>
-                          <%= cl_image_tag plant.photo, height: 200, width: 250, crop: :fill %>
-                            <h3 class="m-t-10">
-                              <%= link_to add_plant_item_path(c_item, plant: plant.id), method: :post, remote: true do %>
-                                <i class="fa fa-plus-circle fa-lg refresh" aria-hidden="true"></i></h3>
-                              <% end %>
-                            </h3>
-                        </div>
-                      <% end %>
-                    </div>
-                    <!-- END CAROUSEL-->
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div class="container">
-        <div class="row m-b-40">
-          <!-- SHOP ITEM -->
-          <div class="col-sm-2 col-sm-offset-1 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-1" style="background-color:white; border-radius: 20px; margin-right:10px; margin-left:10px;">
-            <div class="shop-item p-t-20">
-              <div class="shop-item-photo">
-                <h4 class="text-center"><%= c_item.name %></h4>
-                <%= cl_image_tag c_item.photo, height: 130, width: 150, crop: :fill %>
-              </div>
-              <div class="shop-item-title">
-
-              </div>
-            </div>
-          </div>
-          <% c_item.plants.each do |plant| %>
-            <div class="col-sm-2 col-md-2 col-lg-2" style="background-color:white; border-radius: 20px;  margin-right:10px; margin-left:10px;">
-              <div class="shop-item">
-                <div class="shop-item-photo text-center">
-                  <h5 class="p-t-20"><%= plant.name %></h5>
-                  <%= cl_image_tag plant.photo, height: 100, width: 150, crop: :fill %>
-                </div>
-              </div>
-              <div class="shop-item-title">
-                <%= link_to remove_plant_item_path(c_item, plant: plant.id), method: :post, remote: true do%>
-                  <h3><i class="fa fa-minus-circle fa-lg refresh" aria-hidden="true"></i></h3>
-                <% end %>
-              </div>
-            </div>
-          <% end %>
-          <!-- END SHOP ITEM -->
-        </div><!-- .row -->
-      </div>
-
-      <div class="row">
-        <div class="col-sm-8 col-sm-offset-2 text-center">
-          <h1 class="lead m-b-20" style="color:black"><%= button_to "Add to your balcony", add_item_balcony_path(@balcony, item: c_item.id), class: "btn btn-lg btn-circle btn-gray refresh", remote: true %></h1>
-        </div>
-      </div><!-- .row -->
-  </div>
-  <% end %>
-
-</section>
-
-
-<!-- PRODUCT SELECTION -->
-
-<!-- LE COEUR DU REACTEUR 2 -->
-<section class="p-t-40 p-b-20 p-b-0">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-8 col-sm-offset-2 text-center">
-        <h1 class="p-t-40">2. Add some Plants and Decorations</h1>
-        <p class="lead m-b-40"> That is also part of pimping !</p>
-      </div>
-    </div><!-- .row -->
-  </div>
-</section>
-
-<!-- WRAPPER -->
 <div class="wrapper">
-  <section class=" m-t-40 bg-white-dark">
+
+  <section class="m-t-40 bg-white-dark">
     <div class="container">
       <div class="row">
         <div class="col-sm-12 text-center">
-          <!-- PORTFOLIO FILTERS -->
+          <h3 class="montserrat text-uppercase m-b-10">J'ai besoin:</h3>
+          <div class="row">
+            <div class="col-sm-12">
+              <ul id="tabs" class="filters p-t-20 bg-white-dark">
+                <li><%= link_to "De Profiter", complete_path(category: 'De Profiter', anchor: 'anchor1') %></li>
+                <li><%= link_to "De Cuisiner", complete_path(category: 'De Cuisiner', anchor: 'anchor1') %></li>
+                <li><%= link_to "De Cultiver", complete_path(category: 'De Cultiver', anchor: 'anchor1') %></li>
+                <li><%= link_to "De Me Proteger", complete_path(category: 'De Me Proteger', anchor: 'anchor1') %></li>
+                <li><%= link_to "De m'éclairer", complete_path(category: "De m'éclairer", anchor: 'anchor1') %></li>
+                <li><%= link_to "De Refaire mon sol", complete_path(category: 'De Refaire mon sol', anchor: 'anchor1') %></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12 text-center">>
           <div class="row">
             <div class="col-sm-12">
               <ul id="filters" class="filters p-t-20 bg-white-dark">
-                <li><a href="#" class="current" data-filter="*">All</a></li>
-                <li><a href="#" data-filter=".plant">Plant</a></li>
-                <li><a href="#" data-filter=".deco">Deco</a></li>
+                <li><a href="#" class="current" data-filter="*">Tout</a></li>
+                <% @sub_categories.each do |sc|%>
+                  <li><a href="#" data-filter=<%=".#{sc.gsub('&', '+').gsub('é', 'e').gsub("'", '-').gsub(' ', '-').downcase}"%>> <%=sc.capitalize%> </a></li>
+                <% end %>
               </ul>
             </div>
           </div>
@@ -345,6 +115,7 @@
       </div>
     </div>
   </section>
+
   <!-- PORTFOLIO -->
   <section class=" m-t-40 p-b-0">
     <div class="container">
@@ -356,25 +127,23 @@
         <div id="works-grid" class="works-grid works-grid-4">
 
           <!-- PORTFOLIO ITEM -->
-          <% Item.where.not(category: "Pot").where.not(category: "Custom").each do |product| %>
-            <article class="work-item <%= product.category.downcase %>" style="padding: 20px 20px 40px 20px;">
+          <% @items.each do |item| %>
+            <article class="work-item <%= item.sub_category.gsub('&', '+').gsub('é', 'e').gsub("'", '-').gsub(' ', '-').downcase %>" style="padding: 20px 20px 40px 20px;">
               <div class="work-wrapper">
-                <%= cl_image_tag product.photo, height: 500, width: 720, crop: :fill %>
+                <%= image_tag item.attributes['photo_url']%>
                 <div class="work-overlay">
                   <div class="work-caption">
                     <div class="work-title" style="text-align:center;">
-                      <h5><%= humanized_money_with_symbol(product.price) %> </h5>
-                        <%= link_to add_item_balcony_path(@balcony, item: product.id), id: "refresh", method: :post, remote: true do %>
-                            <h2>
-                            <i class="fa fa-plus-circle fa-lg refresh" aria-hidden="true" style="color:black; width: 100px;"></i>
-                            </h2>
+                      <h5><%= humanized_money_with_symbol(item.price) %> </h5>
+                        <%= link_to(add_item_carts_path(item: item.id),html_options = { method: :post, class: "dynamic-add-to-cart-item", remote: true}) do %>
+                            <i class="icon-basket-loaded icons" aria-hidden="true" style="color:white; width: 100px;"></i>
                         <% end %>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="work-title p-t-20" style="text-align:center;">
-                <h5><%= link_to product.name, item_path(product.id) %></h5>
+              <div class="work-title p-t-20" data-id="<%='additem' + item.id.to_s%>" style="text-align:center;">
+                <h5><%= link_to "Ajouter au balcon",add_item_balcony_path(@balcony, item: item.id), id: "refresh", method: :post %></h5>
               </div>
             </article>
           <% end %>
@@ -383,22 +152,19 @@
         <!-- END WORKS GRID -->
       </div>
       <!-- END WORKS WRAPPER -->
-
-      <!-- END PORTFOLIO -->
-    </div>
-    <!-- END WRAPPER -->
-  </section>
+    </section>
+    <!-- END PORTFOLIO -->
+  </div>
+  <!-- END WRAPPER -->
 </div>
-<!-- END LE COEUR DU REACTEUR -->
-
 
 <!-- FINAL RECAP -->
 <section class="p-t-40 p-b-20 p-b-0 bg-white-dark">
   <div class="container">
     <div class="row">
       <div class="col-sm-8 col-sm-offset-2 text-center">
-        <h1 class="p-t-40">This is it ! Here are your balcony items  </h1>
-        <p class="lead m-b-40"> Purchase your balcony items or save it for later!  </p>
+        <h1 class="p-t-40">On y est ! Voilà votre séléction </h1>
+        <p class="lead m-b-40"> Ajoutez votre séléction au panier ou sauvez la pour plus tard !  </p>
       </div>
     </div><!-- .row -->
   </div>
@@ -410,16 +176,10 @@
     <div class="row">
       <% @balcony.items.each do |item| %>
         <div class="col-xs-2 text-center" style="background-color:white; border-radius: 20px; padding: 0px 30px 0px 30px; padding-top: 20px; margin: 0px 20px 0px 20px">
-          <%= cl_image_tag item.photo, height: 160, width: 130, crop: :fill,radius: 20 %>
+          <%= image_tag item.attributes['photo_url'], class: 'image-responsive' %>
           <%= link_to remove_item_balcony_path(@balcony, item: item.id), method: :post, remote: true  do %>
             <h4><%= item.name %></h4>
             <h3><i class="fa fa-minus-circle fa-lg refresh" style="bottom: 0px;" aria-hidden="true"></i></h3>
-            <% if item.category == "Custom" %>
-            <h5>Pimped <i class="fa fa-pied-piper-pp fa-lg m-b-10" aria-hidden="true"> Pot</i></h5>
-              <% item.plants.each do |plant| %>
-                <h5 class="text-center "><%= plant.name %> x 1</h5>
-              <% end %>
-            <% end %>
           <% end %>
         </div>
       <% end %>
@@ -428,8 +188,8 @@
 
 <!-- PROGRESSBAR -->
   <div class="container text-center">
-    <%= button_to "Add balcony to cart", add_collection_to_cart_balcony_path(@balcony), class: "btn btn-lg btn-circle btn-base refresh m-t-30", remote: true %>
-    <%= link_to "Save", root_path, class: "btn btn-lg btn-circle btn-outline btn-info m-t-20" %>
+    <%= button_to "Ajouter son balcon au panier", add_collection_to_cart_balcony_path(@balcony), class: "btn btn-lg btn-circle btn-base refresh m-t-30", remote: true %>
+    <%= link_to "Sauver", root_path, class: "btn btn-lg btn-circle btn-outline btn-info m-t-20" %>
   </div>
 </section>
 
