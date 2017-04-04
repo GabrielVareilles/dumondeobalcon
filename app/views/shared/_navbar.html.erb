@@ -1,12 +1,15 @@
 
 <!-- HEADER -->
 <header class="header header-fixed header-transparent">
-  <div class="container">
+  <div class="logo-banner inner-header">
+    <%= link_to image_tag("dmblogo.png"), root_path %>
+  </div>
+  <div class="container logo-position">
 
     <!-- YOUR LOGO HERE -->
-    <div class="inner-header">
+<!--     <div class="inner-header">
       <%= link_to image_tag("logo.jpg", class: "inner-brand brand-light", id: "logo" , style: "width: 80"), root_path %>
-    </div>
+    </div> -->
 
     <!-- OPEN MOBILE MENU -->
     <div class="main-nav-toggle">
@@ -66,13 +69,13 @@
     <!-- MAIN MENU -->
     <nav id="custom-collapse" class="main-nav collapse clearfix">
       <ul class="inner-nav pull-right">
-        <li> <%= link_to 'Inspiration', inspiration_path %> </li>
-        <li> <%= link_to 'Nos services', '#' %> </li>
-        <li> <%= link_to 'Nos Produits', items_path %> </li>
-        <li> <%= link_to 'Profile', profile_path %> </li>
+        <li> <%= link_to 'Inspiration', inspiration_path, style: 'font-size: 15px' %> </li>
+        <li> <%= link_to 'Nos services', '#', style: 'font-size: 15px' %> </li>
+        <li> <%= link_to 'Nos Produits', items_path, style: 'font-size: 15px' %> </li>
+        <li> <%= link_to 'Profile', profile_path, style: 'font-size: 15px' %> </li>
         <% if current_user %>
           <% if current_user.admin %>
-            <li> <%= link_to 'Admin', admin_root_path %> </li>
+            <li> <%= link_to 'Admin', admin_root_path, style: 'font-size: 15px' %> </li>
           <% end %>
         <% end %>
         <!-- LOGIN  -->
@@ -107,7 +110,7 @@
 
         <% else %>
           <li>
-            <%= link_to 'Login', new_user_session_path %>
+            <%= link_to 'Login', new_user_session_path, style: 'font-size: 15px' %>
           </li>
         <% end %>
         <!-- END LOGIN  -->
