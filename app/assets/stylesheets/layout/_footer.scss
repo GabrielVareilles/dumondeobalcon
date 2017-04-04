@@ -1,1 +1,12 @@
 // Your footer style
+.container-partenaire {
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+.span-footer p {
+  font-size: 15px;
+  font-weight: 600;
+  position:absolute;
+  top: 30px;
+}
