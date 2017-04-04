@@ -210,6 +210,9 @@ h6.text-uppercase,
     font-weight: 700;
 }
 
+.cabana {
+  font-family: "Cabana Regular", Arial, serif;
+}
 .lead {
     line-height: 1.8;
     font-weight: 400;
