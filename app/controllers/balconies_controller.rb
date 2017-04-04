@@ -116,7 +116,7 @@ class BalconiesController < ApplicationController
     @balcony.add_item(@item)
 
     if @balcony.save
-      redirect_to :back
+      redirect_to complete_path(anchor: 'anchor1')
       flash[:notice] = "Item added to your balcony"
     else
       redirect_to complete_path
@@ -129,7 +129,7 @@ class BalconiesController < ApplicationController
     @balcony.remove_item(@item)
 
     if @balcony.save
-      render json: @balcony
+      redirect_to complete_path(anchor: 'anchor2')
       flash[:notice] = "Item removed from your balcony"
     else
       redirect_to complete_path
@@ -142,7 +142,7 @@ class BalconiesController < ApplicationController
       @cart.add_item(item)
     end
     @cart.save
-    render json: @cart
+    redirect_to complete_path
   end
 
   private

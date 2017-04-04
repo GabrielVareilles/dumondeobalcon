@@ -77,13 +77,13 @@
 </section>
 <!-- END YOUR INFO -->
 
-<div class="wrapper">
+<div class="wrapper" id="anchor1">
 
   <section class="m-t-40 bg-white-dark">
     <div class="container">
       <div class="row">
         <div class="col-sm-12 text-center">
-          <h3 class="montserrat text-uppercase m-b-10">J'ai besoin:</h3>
+          <h3 class="montserrat text-uppercase m-b-10" style="margin-top: 30px;">J'ai besoin:</h3>
           <div class="row">
             <div class="col-sm-12">
               <ul id="tabs" class="filters p-t-20 bg-white-dark">
@@ -143,7 +143,7 @@
                 </div>
               </div>
               <div class="work-title p-t-20" data-id="<%='additem' + item.id.to_s%>" style="text-align:center;">
-                <h5><%= link_to "Ajouter au balcon",add_item_balcony_path(@balcony, item: item.id), id: "refresh", method: :post %></h5>
+                <h5><%= link_to "Ajouter au balcon",add_item_balcony_path(@balcony, item: item.id), method: :post %></h5>
               </div>
             </article>
           <% end %>
@@ -160,7 +160,7 @@
 
 <!-- FINAL RECAP -->
 <section class="p-t-40 p-b-20 p-b-0 bg-white-dark">
-  <div class="container">
+  <div class="container" id="anchor2">
     <div class="row">
       <div class="col-sm-8 col-sm-offset-2 text-center">
         <h1 class="p-t-40">On y est ! Voilà votre séléction </h1>
@@ -177,7 +177,7 @@
       <% @balcony.items.each do |item| %>
         <div class="col-xs-2 text-center" style="background-color:white; border-radius: 20px; padding: 0px 30px 0px 30px; padding-top: 20px; margin: 0px 20px 0px 20px">
           <%= image_tag item.attributes['photo_url'], class: 'image-responsive' %>
-          <%= link_to remove_item_balcony_path(@balcony, item: item.id), method: :post, remote: true  do %>
+          <%= link_to remove_item_balcony_path(@balcony, item: item.id), method: :post do %>
             <h4><%= item.name %></h4>
             <h3><i class="fa fa-minus-circle fa-lg refresh" style="bottom: 0px;" aria-hidden="true"></i></h3>
           <% end %>
