@@ -86,7 +86,7 @@
 			<div class="row">
 				<div class="col-sm-12">
 					<ul id="filters" class="filters p-b-10 p-t-10">
-						<li class="p-b-5"><a href="#" class="current" data-filter="*">All</a></li>
+						<li class="p-b-5"><a href="#" class="current" data-filter="*">Tous</a></li>
             <li class="p-b-5"><a href="#" data-filter=".small">Petit</a></li>
 						<li class="p-b-5"><a href="#" data-filter=".medium">Moyen</a></li>
 						<li class="p-b-5"><a href="#" data-filter=".large">Grand</a></li>
@@ -125,7 +125,7 @@
             <!-- ADD YOUR ADDRESS HERE -->
             <% toto = [] %>
             <% tato = '' %>
-            <% Balcony.all.each do |balcony|%>
+            <% Balcony.first(9).each do |balcony|%>
               <% toto << [balcony.latitude, balcony.longitude] %>
               <% tato = toto.to_s[1..-2] %>
             <% end %>
@@ -146,7 +146,7 @@
       <div class="row">
         <div class="col-sm-8 col-sm-offset-2 text-center">
           <h1 class="p-t-40">Des produits adaptés à votre balcon</h1>
-          <p class="lead m-b-40"> Oh that's Awesome !   </p>
+          <p class="lead m-b-40"> Oh c'est super !   </p>
         <%= link_to "Voir le catalogue complet", items_path, class: "btn btn-base btn-lg"  %>
         </div>
       </div><!-- .row -->

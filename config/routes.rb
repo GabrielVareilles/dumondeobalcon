@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
     root to: 'pages#home'
     get "inspiration", to: "pages#inspiration", as: 'inspiration'
+    get "services", to: "pages#services", as: 'services'
     resources :users, only: [:edit, :update]
     get "profile", to: "users#show", as: 'profile'
 

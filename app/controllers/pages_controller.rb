@@ -15,4 +15,7 @@ class PagesController < ApplicationController
     @items = Item.all
   end
 
+  def services
+  end
+
 end
